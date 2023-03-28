@@ -15,7 +15,7 @@ struct ContentView: View {
 
     let tipPercentages = [10, 15, 20, 25, 0]
 
-    var totalPerPerson: Double {
+    private var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
         let tipSelection = Double(tipPercentage)
 
@@ -25,11 +25,28 @@ struct ContentView: View {
         return amountPerPerson
     }
 
+    private var totalToPay: Double {
+        let tipSelection = Double(tipPercentage)
+        let tipValue = checkAmount / 100 * tipSelection
+        let totalToPay = checkAmount + tipValue
+        return totalToPay
+    }
+
+    private var tipValue: Double {
+        let tipSelection = Double(tipPercentage)
+        let tipValue = checkAmount / 100 * tipSelection
+        return tipValue
+    }
+
+    private var currentCurrencyIdentifier: FloatingPointFormatStyle<Double>.Currency {
+        return .currency(code: Locale.current.currency?.identifier ?? "USD")
+    }
+
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    TextField("Amount", value: $checkAmount, format: currentCurrencyIdentifier)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
                 }
@@ -41,20 +58,29 @@ struct ContentView: View {
                 }
 
                 Section {
+                    let tipStride = stride(from: 0, to: 102, by: 2)
+
                     Picker("Tip Percentage", selection: $tipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
+                        ForEach(Array(tipStride), id: \.self) {
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
+                    .pickerStyle(.menu)
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
 
                 Section {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(totalPerPerson, format: currentCurrencyIdentifier)
                 } header: {
                     Text("Amount per preson")
+                }
+
+                Section {
+                    Text("Tip amount: \(tipValue, specifier: "%.2f")")
+                    Text("Total bill + tip: \(totalToPay, specifier: "%.2f")")
+                } header: {
+                    Text("Payment breakdown")
                 }
             }
             .navigationTitle("WeSplit")
@@ -78,3 +104,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
