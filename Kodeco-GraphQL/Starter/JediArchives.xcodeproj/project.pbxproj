@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,11 @@
 		5583875D2463830A00508A06 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 5583875B2463830A00508A06 /* Queries.graphql */; };
 		558387732463867C00508A06 /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558387722463867C00508A06 /* FilmsViewController.swift */; };
 		558387842463B27B00508A06 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558387832463B27B00508A06 /* API.swift */; };
+		A1AC768629F4607A000DCA59 /* StarWarsAPI in Resources */ = {isa = PBXBuildFile; fileRef = A1AC768529F4607A000DCA59 /* StarWarsAPI */; };
+		A1AC768C29F467DC000DCA59 /* StarWarsAPI in Frameworks */ = {isa = PBXBuildFile; productRef = A1AC768B29F467DC000DCA59 /* StarWarsAPI */; };
+		A1F5723929F4252300BE6E8E /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = A1F5723829F4252300BE6E8E /* Apollo */; };
+		A1F5723C29F42C6600BE6E8E /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = A1F5723B29F42C6600BE6E8E /* schema.json */; };
+		A1F5723E29F43CFF00BE6E8E /* star-wars-swapi@current.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = A1F5723D29F43CFF00BE6E8E /* star-wars-swapi@current.graphqls */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,9 @@
 		5583875B2463830A00508A06 /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		558387722463867C00508A06 /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
 		558387832463B27B00508A06 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A1AC768529F4607A000DCA59 /* StarWarsAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = StarWarsAPI; sourceTree = "<group>"; };
+		A1F5723B29F42C6600BE6E8E /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		A1F5723D29F43CFF00BE6E8E /* star-wars-swapi@current.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "star-wars-swapi@current.graphqls"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AC768C29F467DC000DCA59 /* StarWarsAPI in Frameworks */,
+				A1F5723929F4252300BE6E8E /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +62,7 @@
 			children = (
 				185CB1FA23C78CE6009F7571 /* Jedi Archives */,
 				185CB1F923C78CE6009F7571 /* Products */,
+				A1AC768A29F467DC000DCA59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,12 +77,13 @@
 		185CB1FA23C78CE6009F7571 /* Jedi Archives */ = {
 			isa = PBXGroup;
 			children = (
+				A1F5723B29F42C6600BE6E8E /* schema.json */,
 				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
 				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
 				55838758246382E200508A06 /* GraphQL */,
 				558387552463825100508A06 /* Resources */,
-				5583877A246398B100508A06 /* Supporting Files */,
 				558387572463826800508A06 /* View Controllers */,
+				5583877A246398B100508A06 /* Supporting Files */,
 			);
 			path = "Jedi Archives";
 			sourceTree = "<group>";
@@ -107,6 +119,8 @@
 		55838758246382E200508A06 /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
+				A1AC768529F4607A000DCA59 /* StarWarsAPI */,
+				A1F5723D29F43CFF00BE6E8E /* star-wars-swapi@current.graphqls */,
 				558387832463B27B00508A06 /* API.swift */,
 				5583875A2463830A00508A06 /* Apollo.swift */,
 				5583875B2463830A00508A06 /* Queries.graphql */,
@@ -120,6 +134,13 @@
 				185CB20923C78CE8009F7571 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1AC768A29F467DC000DCA59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +161,8 @@
 			);
 			name = "Jedi Archives";
 			packageProductDependencies = (
+				A1F5723829F4252300BE6E8E /* Apollo */,
+				A1AC768B29F467DC000DCA59 /* StarWarsAPI */,
 			);
 			productName = MyRWTutorial;
 			productReference = 185CB1F823C78CE6009F7571 /* Jedi Archives.app */;
@@ -152,7 +175,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Ray Wenderlich";
 				TargetAttributes = {
 					185CB1F723C78CE6009F7571 = {
@@ -170,6 +193,7 @@
 			);
 			mainGroup = 185CB1EF23C78CE6009F7571;
 			packageReferences = (
+				A1F5723729F4252300BE6E8E /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 185CB1F923C78CE6009F7571 /* Products */;
 			projectDirPath = "";
@@ -185,7 +209,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AC768629F4607A000DCA59 /* StarWarsAPI in Resources */,
 				180DC61523C78D9800486B1A /* LaunchScreen.storyboard in Resources */,
+				A1F5723C29F42C6600BE6E8E /* schema.json in Resources */,
+				A1F5723E29F43CFF00BE6E8E /* star-wars-swapi@current.graphqls in Resources */,
 				185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */,
 				5583875D2463830A00508A06 /* Queries.graphql in Resources */,
 				185CB20323C78CE6009F7571 /* Main.storyboard in Resources */,
@@ -270,6 +297,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -330,6 +358,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -414,6 +443,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1F5723729F4252300BE6E8E /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1AC768B29F467DC000DCA59 /* StarWarsAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StarWarsAPI;
+		};
+		A1F5723829F4252300BE6E8E /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1F5723729F4252300BE6E8E /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 185CB1F023C78CE6009F7571 /* Project object */;
 }

@@ -32,49 +32,60 @@
 
 import UIKit
 import Apollo
+import StarWarsAPI
 
 class FilmsViewController: UITableViewController {
     var films = [AllFilmsQuery.Data.AllFilms.Film]()
 
-  @IBSegueAction func showFilmDetails(_ coder: NSCoder, sender: Any?) -> FilmDetailsViewController? {
-    return nil
-  }
+    @IBSegueAction func showFilmDetails(_ coder: NSCoder, sender: Any?) -> FilmDetailsViewController? {
+        return nil
+    }
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    loadData()
-  }
+        loadData()
+    }
 }
 
 extension FilmsViewController {
-  func loadData() {
-      let query = AllFilmsQuery()
-      Apollo.shared.client.fetch(query: query) { result in
-          switch result {
-              case .success(let response):
-                  print(response)
-              case .failure:
-                  print("errror")
-          }
+    func loadData() {
+        let query = AllFilmsQuery()
+        Apollo.shared.client.fetch(query: query) { result in
+            switch result {
+                case .success(let graphQLResult):
+                    self.saveFilms(from: graphQLResult)
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    print("Error loading data \(error)")
+            }
 
-      }
-  }
+        }
+    }
+
+    // MARK: - Private methods
+    private func saveFilms(from result: GraphQLResult<AllFilmsQuery.Data>) {
+        guard let films = result.data?.allFilms?.films?.compactMap({ $0 }) else {
+            return
+        }
+        self.films = films
+    }
 }
 
 extension FilmsViewController {
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    // swiftlint:disable:next force_unwrapping
-    let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell")!
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // swiftlint:disable:next force_unwrapping
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell")!
 
-    return cell
-  }
 
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return films.count
-  }
+        return cell
+    }
 
-  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Films"
-  }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return films.count
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Films"
+    }
 }
