@@ -31,9 +31,10 @@
 /// THE SOFTWARE.
 
 import UIKit
+import Apollo
 
 class FilmsViewController: UITableViewController {
-  var films: [String] = []
+    var films = [AllFilmsQuery.Data.AllFilms.Film]()
 
   @IBSegueAction func showFilmDetails(_ coder: NSCoder, sender: Any?) -> FilmDetailsViewController? {
     return nil
@@ -48,6 +49,16 @@ class FilmsViewController: UITableViewController {
 
 extension FilmsViewController {
   func loadData() {
+      let query = AllFilmsQuery()
+      Apollo.shared.client.fetch(query: query) { result in
+          switch result {
+              case .success(let response):
+                  print(response)
+              case .failure:
+                  print("errror")
+          }
+
+      }
   }
 }
 

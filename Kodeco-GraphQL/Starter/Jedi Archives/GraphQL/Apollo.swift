@@ -28,7 +28,16 @@
 
 // swiftlint:disable:next superfluous_disable_command
 // swiftlint:disable force_unwrapping
+import Apollo
 import Foundation
 
 class Apollo {
+    static let shared = Apollo()
+
+    let client: ApolloClient
+    private let localHost = URL(string: "http://localhost:65424")!
+
+    private init() {
+        client = ApolloClient(url: localHost)
+    }
 }
