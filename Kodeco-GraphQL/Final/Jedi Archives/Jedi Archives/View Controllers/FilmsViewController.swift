@@ -34,43 +34,43 @@ import UIKit
 import Apollo
 
 class FilmsViewController: UITableViewController {
-  var films: [AllFilmsQuery.Data.AllFilm.Film] = []
-
-  @IBSegueAction func showFilmDetails(_ coder: NSCoder, sender: Any?) -> FilmDetailsViewController? {
-    guard
-      let cell = sender as? UITableViewCell,
-      let indexPath = tableView.indexPath(for: cell)
-      else {
-        return nil
+    var films: [AllFilmsQuery.Data.AllFilm.Film] = []
+    
+    @IBSegueAction func showFilmDetails(_ coder: NSCoder, sender: Any?) -> FilmDetailsViewController? {
+        guard
+            let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell)
+        else {
+            return nil
+        }
+        return FilmDetailsViewController(film: films[indexPath.row], coder: coder)
     }
-    return FilmDetailsViewController(film: films[indexPath.row], coder: coder)
-  }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    loadData()
-  }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loadData()
+    }
 }
 
 extension FilmsViewController {
-  func loadData() {
-    // 1
-    let query = AllFilmsQuery()
-    // 2
-    Apollo.shared.client.fetch(query: query) { result in
-      // 3
-      switch result {
-      case .success(let graphQLResult):
-              self.saveFilms(from: graphQLResult)
-              self.tableView.reloadData()
-      case .failure(let error):
-        // 5
-        print("Error loading data \(error)")
-      }
+    func loadData() {
+        // 1
+        let query = AllFilmsQuery()
+        // 2
+        Apollo.shared.client.fetch(query: query) { result in
+            // 3
+            switch result {
+                case .success(let graphQLResult):
+                    self.saveFilms(from: graphQLResult)
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    // 5
+                    print("Error loading data \(error)")
+            }
+        }
     }
-  }
-
+    
     // MARK: - Private methods
     private func saveFilms(from result: GraphQLResult<AllFilmsQuery.Data>) {
         guard let films = result.data?.allFilms?.films?.compactMap({ $0 }) else {
@@ -81,19 +81,19 @@ extension FilmsViewController {
 }
 
 extension FilmsViewController {
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    // swiftlint:disable:next force_unwrapping
-    let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell")!
-    let film = films[indexPath.row]
-    cell.textLabel?.text = film.title
-    return cell
-  }
-
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return films.count
-  }
-
-  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Films"
-  }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // swiftlint:disable:next force_unwrapping
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell")!
+        let film = films[indexPath.row]
+        cell.textLabel?.text = film.title
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return films.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Films"
+    }
 }
