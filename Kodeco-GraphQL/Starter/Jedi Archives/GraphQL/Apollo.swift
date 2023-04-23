@@ -35,9 +35,9 @@ class Apollo {
     static let shared = Apollo()
 
     let client: ApolloClient
-    private let localHost = URL(string: "http://localhost:65424")!
+    private let localHost = URL(string: "http://localhost:51971")!
 
-    private init() {
+    init() {
         client = ApolloClient(url: localHost)
     }
 }

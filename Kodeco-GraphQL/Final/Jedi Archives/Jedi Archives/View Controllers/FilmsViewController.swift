@@ -31,6 +31,7 @@
 /// THE SOFTWARE.
 
 import UIKit
+import Apollo
 
 class FilmsViewController: UITableViewController {
   var films: [AllFilmsQuery.Data.AllFilm.Film] = []
@@ -61,18 +62,22 @@ extension FilmsViewController {
       // 3
       switch result {
       case .success(let graphQLResult):
-        if let films = graphQLResult.data?.allFilms?.films?.compactMap({ $0 }) {
-          // 4
-          self.films = films
-          self.tableView.reloadData()
-        }
-
+              self.saveFilms(from: graphQLResult)
+              self.tableView.reloadData()
       case .failure(let error):
         // 5
         print("Error loading data \(error)")
       }
     }
   }
+
+    // MARK: - Private methods
+    private func saveFilms(from result: GraphQLResult<AllFilmsQuery.Data>) {
+        guard let films = result.data?.allFilms?.films?.compactMap({ $0 }) else {
+            return
+        }
+        self.films = films
+    }
 }
 
 extension FilmsViewController {

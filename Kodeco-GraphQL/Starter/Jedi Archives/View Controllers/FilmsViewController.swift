@@ -76,8 +76,14 @@ extension FilmsViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // swiftlint:disable:next force_unwrapping
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell")!
-
-
+        let film = films[indexPath.row]
+        if #available(iOS 14.0, *) {
+            var content = cell.defaultContentConfiguration()
+            content.text = film.title
+            cell.contentConfiguration = content
+        } else {
+            cell.textLabel?.text = film.title
+        }
         return cell
     }
 

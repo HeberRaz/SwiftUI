@@ -37,6 +37,6 @@ class Apollo {
   // 3
   init() {
     // swiftlint:disable:next force_unwrapping
-    client = ApolloClient(url: URL(string: "http://localhost:58800")!)
+    client = ApolloClient(url: URL(string: "http://localhost:51971")!)
   }
 }
