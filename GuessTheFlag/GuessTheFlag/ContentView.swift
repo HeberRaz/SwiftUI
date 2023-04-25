@@ -9,12 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        textZStack
+        .ignoresSafeArea()
+    }
+
+    private var textZStack: some View {
         ZStack {
             Color.mint
             Color.secondary
                 .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 400)
-            Text("Hello, world!")
+            helloWorld
+            backgroundVStack
         }
+    }
+
+    private var helloWorld: some View {
+        Text("Hello, world!")
+            .foregroundStyle(.secondary)
+            .padding(50)
+            .background(.ultraThinMaterial)
+    }
+
+    private var backgroundVStack: some View {
+        VStack(spacing: 0) {
+            Color.green.opacity(0.3)
+            Color.purple.opacity(0.3)
+        }
+        .ignoresSafeArea()
     }
 }
 
