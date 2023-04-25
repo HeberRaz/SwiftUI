@@ -15,12 +15,17 @@ struct ContentView: View {
 
     private var textZStack: some View {
         ZStack {
-            Color.mint
-            Color.secondary
-                .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 400)
+            gradient
             helloWorld
             backgroundVStack
         }
+    }
+
+    private var gradient: some View {
+        RadialGradient(gradient: .init(colors: [.blue, .black]),
+                       center: .center,
+                       startRadius: 20,
+                       endRadius: 200)
     }
 
     private var helloWorld: some View {
