@@ -35,20 +35,18 @@ import Apollo
 
 class FilmsViewController: UITableViewController {
     var films: [AllFilmsQuery.Data.AllFilm.Film] = []
-    
+
     @IBSegueAction func showFilmDetails(_ coder: NSCoder, sender: Any?) -> FilmDetailsViewController? {
-        guard
-            let cell = sender as? UITableViewCell,
-            let indexPath = tableView.indexPath(for: cell)
+        guard let cell = sender as? UITableViewCell,
+              let indexPath = tableView.indexPath(for: cell)
         else {
             return nil
         }
         return FilmDetailsViewController(film: films[indexPath.row], coder: coder)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadData()
     }
 }
@@ -70,7 +68,7 @@ extension FilmsViewController {
             }
         }
     }
-    
+
     // MARK: - Private methods
     private func saveFilms(from result: GraphQLResult<AllFilmsQuery.Data>) {
         guard let films = result.data?.allFilms?.films?.compactMap({ $0 }) else {
@@ -85,14 +83,20 @@ extension FilmsViewController {
         // swiftlint:disable:next force_unwrapping
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell")!
         let film = films[indexPath.row]
-        cell.textLabel?.text = film.title
+        if #available(iOS 14.0, *) {
+            var content = cell.defaultContentConfiguration()
+            content.text = film.title
+            cell.contentConfiguration = content
+        } else {
+            cell.textLabel?.text = film.title
+        }
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return films.count
     }
-    
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Films"
     }
