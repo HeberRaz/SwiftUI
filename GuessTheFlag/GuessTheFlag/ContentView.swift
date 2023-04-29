@@ -14,10 +14,13 @@ struct ContentView: View {
     }
 
     private var textZStack: some View {
-        ZStack {
-            gradient
-            helloWorld
-            backgroundVStack
+        VStack {
+            ZStack {
+                gradient
+                helloWorld
+//                backgroundVStack
+            }
+            delete
         }
     }
 
@@ -41,6 +44,12 @@ struct ContentView: View {
             Color.purple.opacity(0.3)
         }
         .ignoresSafeArea()
+    }
+
+    private var delete: some View {
+        Button("Delete button") {
+            print("Now deleting")
+        }
     }
 }
 
