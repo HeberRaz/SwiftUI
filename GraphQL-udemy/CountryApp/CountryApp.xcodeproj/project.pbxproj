@@ -11,6 +11,7 @@
 		A13D5CAF2A1D19F500EE3F71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */; };
 		A13D5CB12A1D19F700EE3F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13D5CB02A1D19F700EE3F71 /* Assets.xcassets */; };
 		A13D5CB42A1D19F700EE3F71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13D5CB32A1D19F700EE3F71 /* Preview Assets.xcassets */; };
+		A13D5CD62A1D60EA00EE3F71 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = A13D5CD52A1D60EA00EE3F71 /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13D5CD62A1D60EA00EE3F71 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = CountryApp;
+			packageProductDependencies = (
+				A13D5CD52A1D60EA00EE3F71 /* Apollo */,
+			);
 			productName = CountryApp;
 			productReference = A13D5CA92A1D19F500EE3F71 /* CountryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = A13D5CA02A1D19F500EE3F71;
+			packageReferences = (
+				A13D5CD42A1D60EA00EE3F71 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = A13D5CAA2A1D19F500EE3F71 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A13D5CD42A1D60EA00EE3F71 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A13D5CD52A1D60EA00EE3F71 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A13D5CD42A1D60EA00EE3F71 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A13D5CA12A1D19F500EE3F71 /* Project object */;
 }
