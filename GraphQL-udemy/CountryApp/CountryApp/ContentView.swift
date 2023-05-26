@@ -19,16 +19,16 @@ struct ContentView: View {
                 Text(country.name)
             }
         }
+        .listStyle(.plain)
+        .onAppear {
+            fetchCountries()
+        }
     }
     
     var body: some View {
         NavigationView {
             VStack {
                 countriesList
-                .listStyle(PlainListStyle())
-                .onAppear {
-                    fetchCountries()
-                }
             }
             .navigationTitle("Countries")
         }
