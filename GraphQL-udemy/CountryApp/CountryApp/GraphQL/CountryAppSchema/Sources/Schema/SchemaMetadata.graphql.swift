@@ -24,6 +24,7 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     switch typename {
     case "Query": return CountryAppSchema.Objects.Query
     case "Country": return CountryAppSchema.Objects.Country
+    case "State": return CountryAppSchema.Objects.State
     default: return nil
     }
   }
