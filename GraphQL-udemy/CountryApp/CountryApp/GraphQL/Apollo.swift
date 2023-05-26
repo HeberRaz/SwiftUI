@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import Apollo
+
+final class Network {
+    static var shared = Network()
+    lazy var apollo = ApolloClient(url: URL(string: "https://countries.trevorblades.com")!)
+
+    private init() {}
+}

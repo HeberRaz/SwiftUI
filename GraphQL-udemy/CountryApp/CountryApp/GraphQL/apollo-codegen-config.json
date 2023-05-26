@@ -1,5 +1,5 @@
 {
-  "schemaNamespace" : "myschema",
+  "schemaNamespace" : "CountryAppSchema",
   "input" : {
     "operationSearchPaths" : [
       "**/*.graphql"
@@ -14,7 +14,7 @@
       }
     },
     "schemaTypes" : {
-      "path" : "./myschema",
+      "path" : "./CountryAppSchema",
       "moduleType" : {
         "swiftPackageManager" : {
         }

@@ -6,24 +6,24 @@ import ApolloAPI
 public typealias ID = String
 
 public protocol SelectionSet: ApolloAPI.SelectionSet & ApolloAPI.RootSelectionSet
-where Schema == Myschema.SchemaMetadata {}
+where Schema == CountryAppSchema.SchemaMetadata {}
 
 public protocol InlineFragment: ApolloAPI.SelectionSet & ApolloAPI.InlineFragment
-where Schema == Myschema.SchemaMetadata {}
+where Schema == CountryAppSchema.SchemaMetadata {}
 
 public protocol MutableSelectionSet: ApolloAPI.MutableRootSelectionSet
-where Schema == Myschema.SchemaMetadata {}
+where Schema == CountryAppSchema.SchemaMetadata {}
 
 public protocol MutableInlineFragment: ApolloAPI.MutableSelectionSet & ApolloAPI.InlineFragment
-where Schema == Myschema.SchemaMetadata {}
+where Schema == CountryAppSchema.SchemaMetadata {}
 
 public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
   public static let configuration: ApolloAPI.SchemaConfiguration.Type = SchemaConfiguration.self
 
   public static func objectType(forTypename typename: String) -> Object? {
     switch typename {
-    case "Query": return Myschema.Objects.Query
-    case "Country": return Myschema.Objects.Country
+    case "Query": return CountryAppSchema.Objects.Query
+    case "Country": return CountryAppSchema.Objects.Country
     default: return nil
     }
   }

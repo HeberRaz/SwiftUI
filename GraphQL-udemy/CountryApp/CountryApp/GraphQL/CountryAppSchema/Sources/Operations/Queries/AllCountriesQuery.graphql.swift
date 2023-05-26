@@ -22,11 +22,11 @@ public class AllCountriesQuery: GraphQLQuery {
 
   public init() {}
 
-  public struct Data: Myschema.SelectionSet {
+  public struct Data: CountryAppSchema.SelectionSet {
     public let __data: DataDict
     public init(_dataDict: DataDict) { __data = _dataDict }
 
-    public static var __parentType: ApolloAPI.ParentType { Myschema.Objects.Query }
+    public static var __parentType: ApolloAPI.ParentType { CountryAppSchema.Objects.Query }
     public static var __selections: [ApolloAPI.Selection] { [
       .field("countries", [Country].self),
     ] }
@@ -36,20 +36,20 @@ public class AllCountriesQuery: GraphQLQuery {
     /// Country
     ///
     /// Parent Type: `Country`
-    public struct Country: Myschema.SelectionSet {
+    public struct Country: CountryAppSchema.SelectionSet {
       public let __data: DataDict
       public init(_dataDict: DataDict) { __data = _dataDict }
 
-      public static var __parentType: ApolloAPI.ParentType { Myschema.Objects.Country }
+      public static var __parentType: ApolloAPI.ParentType { CountryAppSchema.Objects.Country }
       public static var __selections: [ApolloAPI.Selection] { [
         .field("__typename", String.self),
-        .field("code", Myschema.ID.self),
+        .field("code", CountryAppSchema.ID.self),
         .field("name", String.self),
         .field("capital", String?.self),
         .field("emoji", String.self),
       ] }
 
-      public var code: Myschema.ID { __data["code"] }
+      public var code: CountryAppSchema.ID { __data["code"] }
       public var name: String { __data["name"] }
       public var capital: String? { __data["capital"] }
       public var emoji: String { __data["emoji"] }

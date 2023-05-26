@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "Myschema",
+  name: "CountryAppSchema",
   platforms: [
     .iOS(.v12),
     .macOS(.v10_14),
@@ -11,14 +11,14 @@ let package = Package(
     .watchOS(.v5),
   ],
   products: [
-    .library(name: "Myschema", targets: ["Myschema"]),
+    .library(name: "CountryAppSchema", targets: ["CountryAppSchema"]),
   ],
   dependencies: [
     .package(url: "https://github.com/apollographql/apollo-ios.git", from: "1.0.0"),
   ],
   targets: [
     .target(
-      name: "Myschema",
+      name: "CountryAppSchema",
       dependencies: [
         .product(name: "ApolloAPI", package: "apollo-ios"),
       ],
