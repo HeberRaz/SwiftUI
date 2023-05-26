@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A132351F2A204E6E00B402E1 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = A132351E2A204E6E00B402E1 /* schema.json */; };
 		A13235222A204F9300B402E1 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A13235212A204F9300B402E1 /* Queries.graphql */; };
 		A13235242A2050D600B402E1 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13235232A2050D600B402E1 /* Apollo.swift */; };
+		A13235272A205BB500B402E1 /* apollo-ios-cli in Resources */ = {isa = PBXBuildFile; fileRef = A13235262A205BB500B402E1 /* apollo-ios-cli */; };
+		A13235292A2063EC00B402E1 /* myschema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = A13235282A2063EC00B402E1 /* myschema.graphqls */; };
+		A132352B2A20645B00B402E1 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = A132352A2A20645B00B402E1 /* apollo-codegen-config.json */; };
+		A132352D2A2064D200B402E1 /* myschema in Resources */ = {isa = PBXBuildFile; fileRef = A132352C2A2064D200B402E1 /* myschema */; };
 		A13D5CAD2A1D19F500EE3F71 /* CountryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */; };
 		A13D5CAF2A1D19F500EE3F71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */; };
 		A13D5CB12A1D19F700EE3F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13D5CB02A1D19F700EE3F71 /* Assets.xcassets */; };
@@ -18,9 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A132351E2A204E6E00B402E1 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		A13235212A204F9300B402E1 /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		A13235232A2050D600B402E1 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		A13235262A205BB500B402E1 /* apollo-ios-cli */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "apollo-ios-cli"; sourceTree = "<group>"; };
+		A13235282A2063EC00B402E1 /* myschema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = myschema.graphqls; sourceTree = "<group>"; };
+		A132352A2A20645B00B402E1 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
+		A132352C2A2064D200B402E1 /* myschema */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = myschema; sourceTree = "<group>"; };
 		A13D5CA92A1D19F500EE3F71 /* CountryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAppApp.swift; sourceTree = "<group>"; };
 		A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +49,10 @@
 		A13235202A204F2500B402E1 /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
+				A132352C2A2064D200B402E1 /* myschema */,
+				A13235282A2063EC00B402E1 /* myschema.graphqls */,
+				A132352A2A20645B00B402E1 /* apollo-codegen-config.json */,
+				A13235262A205BB500B402E1 /* apollo-ios-cli */,
 				A13235212A204F9300B402E1 /* Queries.graphql */,
 				A13235232A2050D600B402E1 /* Apollo.swift */,
 			);
@@ -69,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				A13235202A204F2500B402E1 /* GraphQL */,
-				A132351E2A204E6E00B402E1 /* schema.json */,
 				A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */,
 				A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */,
 				A13D5CB02A1D19F700EE3F71 /* Assets.xcassets */,
@@ -150,10 +159,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A132352B2A20645B00B402E1 /* apollo-codegen-config.json in Resources */,
 				A13D5CB42A1D19F700EE3F71 /* Preview Assets.xcassets in Resources */,
-				A132351F2A204E6E00B402E1 /* schema.json in Resources */,
+				A13235272A205BB500B402E1 /* apollo-ios-cli in Resources */,
 				A13235222A204F9300B402E1 /* Queries.graphql in Resources */,
+				A132352D2A2064D200B402E1 /* myschema in Resources */,
 				A13D5CB12A1D19F700EE3F71 /* Assets.xcassets in Resources */,
+				A13235292A2063EC00B402E1 /* myschema.graphqls in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
