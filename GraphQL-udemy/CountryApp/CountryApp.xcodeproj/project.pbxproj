@@ -12,6 +12,8 @@
 		A13235272A205BB500B402E1 /* apollo-ios-cli in Resources */ = {isa = PBXBuildFile; fileRef = A13235262A205BB500B402E1 /* apollo-ios-cli */; };
 		A13235292A2063EC00B402E1 /* CountryAppSchema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = A13235282A2063EC00B402E1 /* CountryAppSchema.graphqls */; };
 		A132352B2A20645B00B402E1 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = A132352A2A20645B00B402E1 /* apollo-codegen-config.json */; };
+		A1345ADC2A226A3000BB4806 /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1345ADB2A226A3000BB4806 /* CountryDetailView.swift */; };
+		A1345ADF2A226C6300BB4806 /* all_countries.json in Resources */ = {isa = PBXBuildFile; fileRef = A1345ADE2A226C6300BB4806 /* all_countries.json */; };
 		A13D5CAD2A1D19F500EE3F71 /* CountryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */; };
 		A13D5CAF2A1D19F500EE3F71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */; };
 		A13D5CB12A1D19F700EE3F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13D5CB02A1D19F700EE3F71 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 		A13235262A205BB500B402E1 /* apollo-ios-cli */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "apollo-ios-cli"; sourceTree = "<group>"; };
 		A13235282A2063EC00B402E1 /* CountryAppSchema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CountryAppSchema.graphqls; sourceTree = "<group>"; };
 		A132352A2A20645B00B402E1 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
+		A1345ADB2A226A3000BB4806 /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
+		A1345ADE2A226C6300BB4806 /* all_countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = all_countries.json; sourceTree = "<group>"; };
 		A13D5CA92A1D19F500EE3F71 /* CountryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAppApp.swift; sourceTree = "<group>"; };
 		A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,14 @@
 			path = GraphQL;
 			sourceTree = "<group>";
 		};
+		A1345ADD2A226C4900BB4806 /* JsonMocks */ = {
+			isa = PBXGroup;
+			children = (
+				A1345ADE2A226C6300BB4806 /* all_countries.json */,
+			);
+			path = JsonMocks;
+			sourceTree = "<group>";
+		};
 		A13D5CA02A1D19F500EE3F71 = {
 			isa = PBXGroup;
 			children = (
@@ -82,10 +94,12 @@
 			isa = PBXGroup;
 			children = (
 				A13235202A204F2500B402E1 /* GraphQL */,
+				A1345ADD2A226C4900BB4806 /* JsonMocks */,
 				A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */,
 				A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */,
 				A13D5CB02A1D19F700EE3F71 /* Assets.xcassets */,
 				A13D5CB22A1D19F700EE3F71 /* Preview Content */,
+				A1345ADB2A226A3000BB4806 /* CountryDetailView.swift */,
 			);
 			path = CountryApp;
 			sourceTree = "<group>";
@@ -176,6 +190,7 @@
 				A13235222A204F9300B402E1 /* Queries.graphql in Resources */,
 				A13D5CB12A1D19F700EE3F71 /* Assets.xcassets in Resources */,
 				A19D2A6C2A207D0300513651 /* CountryAppSchema in Resources */,
+				A1345ADF2A226C6300BB4806 /* all_countries.json in Resources */,
 				A13235292A2063EC00B402E1 /* CountryAppSchema.graphqls in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13D5CAF2A1D19F500EE3F71 /* ContentView.swift in Sources */,
+				A1345ADC2A226A3000BB4806 /* CountryDetailView.swift in Sources */,
 				A13235242A2050D600B402E1 /* Apollo.swift in Sources */,
 				A13D5CAD2A1D19F500EE3F71 /* CountryAppApp.swift in Sources */,
 			);

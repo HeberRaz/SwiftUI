@@ -14,10 +14,13 @@ struct ContentView: View {
     @ViewBuilder
     private var countriesList: some View {
         List(countries, id: \.code) { country in
-            HStack {
-                Text(country.emoji)
-                Text(country.name)
-            }
+            NavigationLink(
+                destination: Text("Destination")) {
+                    HStack {
+                        Text(country.emoji)
+                        Text(country.name)
+                    }
+                }
         }
         .listStyle(.plain)
         .onAppear {
