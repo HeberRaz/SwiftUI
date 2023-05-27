@@ -97,9 +97,9 @@
 				A1345ADD2A226C4900BB4806 /* JsonMocks */,
 				A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */,
 				A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */,
+				A1345ADB2A226A3000BB4806 /* CountryDetailView.swift */,
 				A13D5CB02A1D19F700EE3F71 /* Assets.xcassets */,
 				A13D5CB22A1D19F700EE3F71 /* Preview Content */,
-				A1345ADB2A226A3000BB4806 /* CountryDetailView.swift */,
 			);
 			path = CountryApp;
 			sourceTree = "<group>";

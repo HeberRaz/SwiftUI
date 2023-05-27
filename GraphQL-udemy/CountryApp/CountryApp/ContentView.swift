@@ -15,7 +15,7 @@ struct ContentView: View {
     private var countriesList: some View {
         List(countries, id: \.code) { country in
             NavigationLink(
-                destination: Text("Destination")) {
+                destination: CountryDetailView(countryCode: country.code)) {
                     HStack {
                         Text(country.emoji)
                         Text(country.name)

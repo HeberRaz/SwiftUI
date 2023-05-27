@@ -14,6 +14,7 @@ public class CountryInfoQuery: GraphQLQuery {
           name
           capital
           emoji
+          native
           states {
             __typename
             name
@@ -55,12 +56,14 @@ public class CountryInfoQuery: GraphQLQuery {
         .field("name", String.self),
         .field("capital", String?.self),
         .field("emoji", String.self),
+        .field("native", String.self),
         .field("states", [State].self),
       ] }
 
       public var name: String { __data["name"] }
       public var capital: String? { __data["capital"] }
       public var emoji: String { __data["emoji"] }
+      public var native: String { __data["native"] }
       public var states: [State] { __data["states"] }
 
       /// Country.State

@@ -12,6 +12,7 @@ query CountryInfo($code:ID!) {
     name
     capital
     emoji
+    native
     states {
       name
     }
