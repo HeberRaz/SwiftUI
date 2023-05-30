@@ -9,22 +9,23 @@ import SwiftUI
 import CountryAppSchema
 
 struct ContentView: View {
-    @State private var countries = [AllCountriesQuery.Data.Country]()
+    @StateObject private var viewModel: CountryListViewModel = CountryListViewModel(network: CountryNetworkManager())
 
     @ViewBuilder
     private var countriesList: some View {
-        List(countries, id: \.code) { country in
+        List(viewModel.countries, id: \.code) { country in
             NavigationLink(
-                destination: CountryDetailView(countryCode: country.code)) {
-                    HStack {
-                        Text(country.emoji)
-                        Text(country.name)
-                    }
+                destination: Text("Destination")
+            ) {
+                HStack {
+                    Text(country.flag)
+                    Text(country.name)
                 }
+            }
         }
         .listStyle(.plain)
         .onAppear {
-            fetchCountries()
+            viewModel.getAllCountries()
         }
     }
     
@@ -34,22 +35,6 @@ struct ContentView: View {
                 countriesList
             }
             .navigationTitle("Countries")
-        }
-    }
-
-    // MARK: - Private methods
-    private func fetchCountries() {
-        Network.shared.apollo.fetch(query: AllCountriesQuery()) { result in
-            switch result {
-            case .success(let graphQLResult):
-                if let countries = graphQLResult.data?.countries {
-                    DispatchQueue.main.async {
-                        self.countries = countries
-                    }
-                }
-            case .failure(let error):
-                print(error)
-            }
         }
     }
 }

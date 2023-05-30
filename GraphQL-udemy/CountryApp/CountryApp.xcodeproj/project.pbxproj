@@ -14,6 +14,10 @@
 		A132352B2A20645B00B402E1 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = A132352A2A20645B00B402E1 /* apollo-codegen-config.json */; };
 		A1345ADC2A226A3000BB4806 /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1345ADB2A226A3000BB4806 /* CountryDetailView.swift */; };
 		A1345ADF2A226C6300BB4806 /* all_countries.json in Resources */ = {isa = PBXBuildFile; fileRef = A1345ADE2A226C6300BB4806 /* all_countries.json */; };
+		A1345AE22A23120200BB4806 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1345AE12A23120200BB4806 /* CountryListViewModel.swift */; };
+		A1345AE42A23123C00BB4806 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1345AE32A23123C00BB4806 /* CountryViewModel.swift */; };
+		A1345AE72A23136D00BB4806 /* CountryNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1345AE62A23136D00BB4806 /* CountryNetworkManager.swift */; };
+		A1345AE92A25D13F00BB4806 /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1345AE82A25D13F00BB4806 /* CountryDetailViewModel.swift */; };
 		A13D5CAD2A1D19F500EE3F71 /* CountryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */; };
 		A13D5CAF2A1D19F500EE3F71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */; };
 		A13D5CB12A1D19F700EE3F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13D5CB02A1D19F700EE3F71 /* Assets.xcassets */; };
@@ -31,6 +35,10 @@
 		A132352A2A20645B00B402E1 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
 		A1345ADB2A226A3000BB4806 /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
 		A1345ADE2A226C6300BB4806 /* all_countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = all_countries.json; sourceTree = "<group>"; };
+		A1345AE12A23120200BB4806 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		A1345AE32A23123C00BB4806 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
+		A1345AE62A23136D00BB4806 /* CountryNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryNetworkManager.swift; sourceTree = "<group>"; };
+		A1345AE82A25D13F00BB4806 /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
 		A13D5CA92A1D19F500EE3F71 /* CountryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAppApp.swift; sourceTree = "<group>"; };
 		A13D5CAE2A1D19F500EE3F71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +81,24 @@
 			path = JsonMocks;
 			sourceTree = "<group>";
 		};
+		A1345AE02A2311EE00BB4806 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A1345AE12A23120200BB4806 /* CountryListViewModel.swift */,
+				A1345AE32A23123C00BB4806 /* CountryViewModel.swift */,
+				A1345AE82A25D13F00BB4806 /* CountryDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A1345AE52A23135600BB4806 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A1345AE62A23136D00BB4806 /* CountryNetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		A13D5CA02A1D19F500EE3F71 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +119,8 @@
 		A13D5CAB2A1D19F500EE3F71 /* CountryApp */ = {
 			isa = PBXGroup;
 			children = (
+				A1345AE52A23135600BB4806 /* Networking */,
+				A1345AE02A2311EE00BB4806 /* ViewModels */,
 				A13235202A204F2500B402E1 /* GraphQL */,
 				A1345ADD2A226C4900BB4806 /* JsonMocks */,
 				A13D5CAC2A1D19F500EE3F71 /* CountryAppApp.swift */,
@@ -204,8 +232,12 @@
 			files = (
 				A13D5CAF2A1D19F500EE3F71 /* ContentView.swift in Sources */,
 				A1345ADC2A226A3000BB4806 /* CountryDetailView.swift in Sources */,
+				A1345AE92A25D13F00BB4806 /* CountryDetailViewModel.swift in Sources */,
 				A13235242A2050D600B402E1 /* Apollo.swift in Sources */,
+				A1345AE42A23123C00BB4806 /* CountryViewModel.swift in Sources */,
+				A1345AE22A23120200BB4806 /* CountryListViewModel.swift in Sources */,
 				A13D5CAD2A1D19F500EE3F71 /* CountryAppApp.swift in Sources */,
+				A1345AE72A23136D00BB4806 /* CountryNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
