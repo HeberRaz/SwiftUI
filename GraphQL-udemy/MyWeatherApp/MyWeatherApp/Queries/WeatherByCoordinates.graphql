@@ -1,0 +1,21 @@
+query WeatherByCoordinates {
+  weather(
+    apiKey: "jpiHqwtdg1sh6SNvmdVHqrC3uk1kBzmW",
+    lat: 41.87,
+    lon: -87.62,
+    source: mock,
+    units: us,
+    windSpeed: kn
+  ) {
+    currently {
+      temperature
+      windSpeed
+    }
+    daily {
+      data {
+        temperatureMax
+        temperatureMin
+      }
+    }
+  }
+}

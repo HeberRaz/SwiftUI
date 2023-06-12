@@ -1,0 +1,212 @@
+"""
+Requires that exactly one field must be supplied and that field must not be `null`.
+"""
+directive @oneOf on INPUT_OBJECT
+
+"""
+Direct the client to resolve this field locally, either from the cache or local resolvers.
+"""
+directive @client(
+  """
+  When true, the client will never use the cache for this value. See
+  https://www.apollographql.com/docs/react/essentials/local-state/#forcing-resolvers-with-clientalways-true
+  """
+  always: Boolean
+) on FIELD | FRAGMENT_DEFINITION | INLINE_FRAGMENT
+
+"""
+Export this locally resolved field as a variable to be used in the remainder of this query. See
+https://www.apollographql.com/docs/react/essentials/local-state/#using-client-fields-as-variables
+"""
+directive @export(
+  """The variable name to export this field as."""
+  as: String!
+) on FIELD
+
+"""
+Specify a custom store key for this result. See
+https://www.apollographql.com/docs/react/advanced/caching/#the-connection-directive
+"""
+directive @connection(
+  """Specify the store key."""
+  key: String!
+
+  """
+  An array of query argument names to include in the generated custom store key.
+  """
+  filter: [String!]
+) on FIELD
+
+type Alert {
+  description: String
+  detailsUrl: String
+  source: String
+  title: String
+}
+
+type Currently {
+  apparentTemperature: Float
+  aqi: Int
+  cloudCover: Float
+  dewPoint: Float
+  humidity: Float
+  icon: String
+  pressure: Float
+  pressureTrend: String
+  summary: String
+  temperature: Float
+  uvIndex: Int
+  visibility: Float
+  windBearing: Int
+  windGust: Float
+  windSpeed: Float
+}
+
+type Daily {
+  data: [Day!]
+  summary: String
+}
+
+type Day {
+  apparentTemperatureMax: Float
+  apparentTemperatureMin: Float
+  aqi: Int
+  cloudCover: Float
+  dewPoint: Float
+  humidity: Float
+  icon: String
+  moonPhase: Float
+  moonPhaseName: String
+  pollenGrass: Int
+  pollenTree: Int
+  pollenWeed: Int
+  precipAccumulation: Float
+  precipIntensity: Float
+  precipProbability: Float
+  precipType: String
+  pressure: Float
+  summary: String
+  sunriseTime: Int
+  sunsetTime: Int
+  temperatureMax: Float
+  temperatureMin: Float
+  time: Int
+  uvIndex: Int
+  visibility: Float
+  windBearing: Int
+  windSpeed: Float
+}
+
+type Hour {
+  apparentTemperature: Float
+  cloudCover: Float
+  dewPoint: Float
+  humidity: Float
+  icon: String
+  precipAccumulation: Float
+  precipIntensity: Float
+  precipProbability: Float
+  precipType: String
+  pressure: Float
+  summary: String
+  temperature: Float
+  time: Int
+  uvIndex: Int
+  visibility: Float
+  windBearing: Int
+  windSpeed: Float
+}
+
+type Hourly {
+  data: [Hour!]
+  summary: String
+}
+
+type Minute {
+  precipIntensity: Float
+  precipType: String
+  time: Int
+}
+
+type Minutely {
+  data: [Minute!]
+  summary: String
+}
+
+enum PrecipAccumulation {
+  in
+  cm
+  mm
+}
+
+enum PrecipIntensity {
+  inhr
+  mmhr
+}
+
+enum Pressure {
+  mb
+  hpa
+  kpa
+  inhg
+  mmhg
+}
+
+type Query {
+  weather(lat: Float, lon: Float, apiKey: String, source: Source, units: Units, precipAccumulation: PrecipAccumulation, precipIntensity: PrecipIntensity, pressure: Pressure, temperature: Temperature, visibility: Visibility, windSpeed: WindSpeed): Weather
+}
+
+enum Source {
+  accuweather
+  aeris_weather
+  apple_weather
+  custom_weather
+  foreca
+  mock
+  open_weather
+  pirate_weather
+  the_weather_company
+  tomorrow_io
+  visual_crossing
+  weatherbit
+}
+
+enum Temperature {
+  f
+  c
+  k
+}
+
+enum Units {
+  us
+  si
+  ca
+  uk
+  m
+}
+
+enum Visibility {
+  mi
+  km
+  m
+}
+
+type Weather {
+  alerts: [Alert!]
+  currently: Currently
+  daily: Daily
+  hourly: Hourly
+  latitude: Float
+  longitude: Float
+  minutely: Minutely
+  source: String
+  timezone: String
+}
+
+enum WindSpeed {
+  mph
+  ms
+  kmh
+  kn
+  bft
+}
