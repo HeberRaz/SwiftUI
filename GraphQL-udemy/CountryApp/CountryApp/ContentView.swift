@@ -9,13 +9,15 @@ import SwiftUI
 import CountryAppSchema
 
 struct ContentView: View {
-    @StateObject private var viewModel: CountryListViewModel = CountryListViewModel(network: CountryNetworkManager())
+    @StateObject private var viewModel: CountryListViewModel = CountryListViewModel(
+        network: CountryNetworkManager()
+    )
 
     @ViewBuilder
     private var countriesList: some View {
         List(viewModel.countries, id: \.code) { country in
             NavigationLink(
-                destination: Text("Destination")
+                destination: CountryDetailView(countryCode: country.code)
             ) {
                 HStack {
                     Text(country.flag)

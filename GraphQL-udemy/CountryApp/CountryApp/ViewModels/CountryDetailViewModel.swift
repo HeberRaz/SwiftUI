@@ -12,6 +12,12 @@ import Foundation
 class CountryDetailViewModel: ObservableObject {
     @Published private var country: CountryInfoQuery.Data.Country?
 
+    private let network: CountryDataFetcher
+
+    init(network: CountryDataFetcher) {
+        self.network = network
+    }
+
     var name: String {
         country?.name ?? ""
     }
@@ -20,19 +26,21 @@ class CountryDetailViewModel: ObservableObject {
         country?.capital ?? ""
     }
 
+    var native: String {
+        country?.native ?? ""
+    }
+
     var states: [StateViewModel] {
         country?.states.map(StateViewModel.init) ?? []
     }
 
     func getCountryDetailsBy(code: ID) {
-        Network.shared.apollo.fetch(query: CountryInfoQuery(code: code)) { result in
-            switch result {
-            case .success(let graphQLResult):
-                DispatchQueue.main.async {
-                    self.country = graphQLResult.data?.country
-                }
+        network.retreiveCountryDetailsBy(code: code) { response in
+            switch response {
+            case .success(let countryInfo):
+                self.country = countryInfo
             case .failure(let error):
-                fatalError("Error \(error)")
+                fatalError(error.localizedDescription)
             }
         }
     }
