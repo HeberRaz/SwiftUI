@@ -5,9 +5,13 @@
 //  Created by Heber Alvarez on 12/06/23.
 //
 
+import Apollo
 import SwiftUI
+import MyWeatherAppSchema
 
 struct ContentView: View {
+    let viewModel = WeatherViewModel(dataManager: WeatherDataManager())
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +20,9 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            viewModel.getWeatherBy(latitude: 21, longitude: -99)
+        }
     }
 }
 
