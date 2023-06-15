@@ -18,7 +18,7 @@ class WeatherViewModel: ObservableObject {
     var city: String = ""
     var latitude: String = ""
     var weatherInfo: WeatherInfoViewModel?
-    let weatherIcons = ["03d": "cloud", "04d": "smoke"]
+    let weatherIcons = ["03d": "cloud", "04d": "smoke", "clear-day": "sun.min"]
     @Published var status: LoadingStatus = .none
 
     private let dataManager: WeatherDataManager

@@ -32,11 +32,11 @@ struct WeatherView: View {
                 Spacer()
 
                 VStack {
-                    Text(viewModel.temperature.description)
+                    Text("\(viewModel.temperature.description) ºC")
                         .font(.system(size: 60))
                         .foregroundColor(.white)
 
-                    Text("Feels like: \(viewModel.apparentTemperature.description)")
+                    Text("Feels like: \(viewModel.apparentTemperature.description)ºC")
                         .font(.caption)
                         .foregroundColor(.white)
                 }
