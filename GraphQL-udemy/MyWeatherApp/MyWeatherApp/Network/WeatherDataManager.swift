@@ -5,7 +5,7 @@
 //  Created by Heber Alvarez on 12/06/23.
 //
 
-import MyWeatherAppSchema
+import WeatherAppSchema
 import Apollo
 
 enum NetworkStatus {
@@ -15,7 +15,7 @@ enum NetworkStatus {
 
 final class WeatherDataManager {
     func retreiveWeatherBy(latitude: Double, longitude: Double, closure: @escaping (NetworkStatus) -> Void) {
-        Network.shared.apollo.fetch(query: WeatherByCoordinatesQuery()) { result in
+        Network.shared.apollo.fetch(query: WeatherByCoordinatesQuery(latitude: latitude, longitude: longitude)) { result in
             switch result {
             case .success(let graphqlData):
                 closure(.success(graphqlData))

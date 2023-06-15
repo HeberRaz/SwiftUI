@@ -37,19 +37,38 @@ class WeatherViewModel: ObservableObject {
         return "exclamation mark!"
     }
 
-    private func handleWeatherByCoordinates(result: (NetworkStatus) {
+    private func handleWeatherByCoordinates(result: (NetworkStatus)) {
         switch result {
         case .success(let graphqlResult):
-            print(graphqlResult)
+            guard let data = graphqlResult.data,
+                  let weather = data.weather,
+                  let current = weather.currently,
+                  let temperature = current.temperature,
+                  let apparentTemperature = current.apparentTemperature,
+                  let icon = getSystemIcon(current.icon),
+                  let windSpeed = current.windSpeed,
+                  let timezone = weather.timezone else {
+                status = .notFound
+                return
+            }
+
+            self.weatherInfo = WeatherInfoViewModel(
+                temperature: temperature,
+                apparentTemperature: apparentTemperature,
+                icon: icon,
+                windSpeed: windSpeed,
+                timezone: timezone
+            )
         case .failure(let error):
             print(error)
         }
     }
-
-
 }
 
 struct WeatherInfoViewModel {
     let temperature: Double
-    let humidity: Double
+    let apparentTemperature: Double
+    let icon: String
+    let windSpeed: Double
+    let timezone: String
 }

@@ -1,21 +1,27 @@
-query WeatherByCoordinates {
+query WeatherByCoordinates($latitude: Float!, $longitude:Float!) {
   weather(
     apiKey: "jpiHqwtdg1sh6SNvmdVHqrC3uk1kBzmW",
-    lat: 41.87,
-    lon: -87.62,
+    lat: $latitude,
+    lon: $longitude,
     source: mock,
-    units: us,
-    windSpeed: kn
+    units: si,
+    windSpeed: kmh
   ) {
     currently {
       temperature
+      apparentTemperature
+      icon
       windSpeed
     }
     daily {
       data {
         temperatureMax
         temperatureMin
+        time
+        sunriseTime
+        sunsetTime
       }
     }
+    timezone
   }
 }

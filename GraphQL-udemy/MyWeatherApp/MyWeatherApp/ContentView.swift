@@ -7,7 +7,6 @@
 
 import Apollo
 import SwiftUI
-import MyWeatherAppSchema
 
 struct ContentView: View {
     let viewModel = WeatherViewModel(dataManager: WeatherDataManager())
@@ -21,7 +20,7 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            viewModel.getWeatherBy(latitude: 21, longitude: -99)
+//            viewModel.getWeatherBy(latitude: 21, longitude: -99)
         }
     }
 }

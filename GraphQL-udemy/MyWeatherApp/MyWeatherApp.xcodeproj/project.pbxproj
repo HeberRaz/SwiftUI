@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A18134592A37BF9F003807F6 /* WeatherAppSchema in Resources */ = {isa = PBXBuildFile; fileRef = A18134582A37BF9F003807F6 /* WeatherAppSchema */; };
-		A181345B2A37BFCB003807F6 /* MyWeatherAppSchema in Frameworks */ = {isa = PBXBuildFile; productRef = A181345A2A37BFCB003807F6 /* MyWeatherAppSchema */; };
 		A181345E2A37DDF2003807F6 /* WeatherViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181345D2A37DDF2003807F6 /* WeatherViewModels.swift */; };
 		A18134612A382DC2003807F6 /* WeatherNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18134602A382DC2003807F6 /* WeatherNetwork.swift */; };
 		A18134632A382EAE003807F6 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18134622A382EAE003807F6 /* WeatherDataManager.swift */; };
+		A1A6DE742A3903170095E305 /* WeatherAppSchema in Resources */ = {isa = PBXBuildFile; fileRef = A1A6DE732A3903170095E305 /* WeatherAppSchema */; };
+		A1A6DE762A3903A30095E305 /* apollo-ios-cli in Resources */ = {isa = PBXBuildFile; fileRef = A1A6DE752A3903A30095E305 /* apollo-ios-cli */; };
+		A1A6DE782A3903B00095E305 /* WeatherAppSchema in Frameworks */ = {isa = PBXBuildFile; productRef = A1A6DE772A3903B00095E305 /* WeatherAppSchema */; };
 		A1D341742A3782F20091F406 /* MyWeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D341732A3782F20091F406 /* MyWeatherAppApp.swift */; };
 		A1D341762A3782F20091F406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D341752A3782F20091F406 /* ContentView.swift */; };
 		A1D341782A3782F30091F406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D341772A3782F30091F406 /* Assets.xcassets */; };
@@ -19,14 +20,14 @@
 		A1D341832A37884B0091F406 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = A1D341822A37884B0091F406 /* Apollo */; };
 		A1D341852A37A57B0091F406 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = A1D341842A37A57B0091F406 /* schema.graphqls */; };
 		A1D341882A37A6470091F406 /* WeatherByCoordinates.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A1D341872A37A6470091F406 /* WeatherByCoordinates.graphql */; };
-		A1D3418D2A37AF9C0091F406 /* apollo-ios-cli in Resources */ = {isa = PBXBuildFile; fileRef = A1D3418C2A37AF9C0091F406 /* apollo-ios-cli */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A18134582A37BF9F003807F6 /* WeatherAppSchema */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatherAppSchema; sourceTree = "<group>"; };
 		A181345D2A37DDF2003807F6 /* WeatherViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModels.swift; sourceTree = "<group>"; };
 		A18134602A382DC2003807F6 /* WeatherNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetwork.swift; sourceTree = "<group>"; };
 		A18134622A382EAE003807F6 /* WeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
+		A1A6DE732A3903170095E305 /* WeatherAppSchema */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatherAppSchema; sourceTree = "<group>"; };
+		A1A6DE752A3903A30095E305 /* apollo-ios-cli */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "apollo-ios-cli"; sourceTree = "<group>"; };
 		A1D341702A3782F20091F406 /* MyWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D341732A3782F20091F406 /* MyWeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeatherAppApp.swift; sourceTree = "<group>"; };
 		A1D341752A3782F20091F406 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		A1D3417A2A3782F30091F406 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1D341842A37A57B0091F406 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 		A1D341872A37A6470091F406 /* WeatherByCoordinates.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeatherByCoordinates.graphql; sourceTree = "<group>"; };
-		A1D3418C2A37AF9C0091F406 /* apollo-ios-cli */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "apollo-ios-cli"; path = "../../../../Library/Developer/Xcode/DerivedData/MyWeatherApp-cvqvelddzdolpngjtwnsjrggfoan/Build/Products/Debug/apollo-ios-cli"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A181345B2A37BFCB003807F6 /* MyWeatherAppSchema in Frameworks */,
+				A1A6DE782A3903B00095E305 /* WeatherAppSchema in Frameworks */,
 				A1D341832A37884B0091F406 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,8 +70,8 @@
 		A1D341672A3782F20091F406 = {
 			isa = PBXGroup;
 			children = (
-				A18134582A37BF9F003807F6 /* WeatherAppSchema */,
-				A1D3418C2A37AF9C0091F406 /* apollo-ios-cli */,
+				A1A6DE732A3903170095E305 /* WeatherAppSchema */,
+				A1A6DE752A3903A30095E305 /* apollo-ios-cli */,
 				A1D341842A37A57B0091F406 /* schema.graphqls */,
 				A1D341722A3782F20091F406 /* MyWeatherApp */,
 				A1D341712A3782F20091F406 /* Products */,
@@ -142,7 +142,7 @@
 			name = MyWeatherApp;
 			packageProductDependencies = (
 				A1D341822A37884B0091F406 /* Apollo */,
-				A181345A2A37BFCB003807F6 /* MyWeatherAppSchema */,
+				A1A6DE772A3903B00095E305 /* WeatherAppSchema */,
 			);
 			productName = MyWeatherApp;
 			productReference = A1D341702A3782F20091F406 /* MyWeatherApp.app */;
@@ -189,11 +189,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A6DE762A3903A30095E305 /* apollo-ios-cli in Resources */,
 				A1D3417B2A3782F30091F406 /* Preview Assets.xcassets in Resources */,
-				A1D3418D2A37AF9C0091F406 /* apollo-ios-cli in Resources */,
 				A1D341852A37A57B0091F406 /* schema.graphqls in Resources */,
 				A1D341882A37A6470091F406 /* WeatherByCoordinates.graphql in Resources */,
-				A18134592A37BF9F003807F6 /* WeatherAppSchema in Resources */,
+				A1A6DE742A3903170095E305 /* WeatherAppSchema in Resources */,
 				A1D341782A3782F30091F406 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,9 +423,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A181345A2A37BFCB003807F6 /* MyWeatherAppSchema */ = {
+		A1A6DE772A3903B00095E305 /* WeatherAppSchema */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = MyWeatherAppSchema;
+			productName = WeatherAppSchema;
 		};
 		A1D341822A37884B0091F406 /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;

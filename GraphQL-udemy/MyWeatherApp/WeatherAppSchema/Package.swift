@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "MyWeatherAppSchema",
+  name: "WeatherAppSchema",
   platforms: [
     .iOS(.v12),
     .macOS(.v10_14),
@@ -11,14 +11,14 @@ let package = Package(
     .watchOS(.v5),
   ],
   products: [
-    .library(name: "MyWeatherAppSchema", targets: ["MyWeatherAppSchema"]),
+    .library(name: "WeatherAppSchema", targets: ["WeatherAppSchema"]),
   ],
   dependencies: [
     .package(url: "https://github.com/apollographql/apollo-ios.git", from: "1.0.0"),
   ],
   targets: [
     .target(
-      name: "MyWeatherAppSchema",
+      name: "WeatherAppSchema",
       dependencies: [
         .product(name: "ApolloAPI", package: "apollo-ios"),
       ],
