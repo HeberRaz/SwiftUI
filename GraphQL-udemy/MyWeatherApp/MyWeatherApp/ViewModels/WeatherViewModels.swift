@@ -16,6 +16,7 @@ enum LoadingStatus {
 
 class WeatherViewModel: ObservableObject {
     var city: String = ""
+    var latitude: String = ""
     var weatherInfo: WeatherInfoViewModel?
     let weatherIcons = ["03d": "cloud", "04d": "smoke"]
     @Published var status: LoadingStatus = .none
@@ -27,7 +28,7 @@ class WeatherViewModel: ObservableObject {
     }
 
     func getWeatherBy(latitude: Double, longitude: Double) {
-        dataManager.retreiveWeatherBy(latitude: 21, longitude: -99, closure: handleWeatherByCoordinates)
+        dataManager.retreiveWeatherBy(latitude: latitude, longitude: longitude, closure: handleWeatherByCoordinates)
     }
 
     private func getSystemIcon(_ icon: String?) -> String? {
@@ -59,7 +60,9 @@ class WeatherViewModel: ObservableObject {
                 windSpeed: windSpeed,
                 timezone: timezone
             )
+            status = .success
         case .failure(let error):
+            status = .failure
             print(error)
         }
     }
