@@ -13,7 +13,7 @@ public class WeatherByCoordinatesQuery: GraphQLQuery {
           apiKey: "jpiHqwtdg1sh6SNvmdVHqrC3uk1kBzmW"
           lat: $latitude
           lon: $longitude
-          source: mock
+          source: tomorrow_io
           units: si
           windSpeed: kmh
         ) {
@@ -68,7 +68,7 @@ public class WeatherByCoordinatesQuery: GraphQLQuery {
         "apiKey": "jpiHqwtdg1sh6SNvmdVHqrC3uk1kBzmW",
         "lat": .variable("latitude"),
         "lon": .variable("longitude"),
-        "source": "mock",
+        "source": "tomorrow_io",
         "units": "si",
         "windSpeed": "kmh"
       ]),

@@ -3,7 +3,7 @@ query WeatherByCoordinates($latitude: Float!, $longitude:Float!) {
     apiKey: "jpiHqwtdg1sh6SNvmdVHqrC3uk1kBzmW",
     lat: $latitude,
     lon: $longitude,
-    source: mock,
+    source: tomorrow_io,
     units: si,
     windSpeed: kmh
   ) {
