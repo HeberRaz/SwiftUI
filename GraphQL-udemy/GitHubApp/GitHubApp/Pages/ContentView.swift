@@ -44,17 +44,19 @@ struct ContentView: View {
     }
 
     var body: some View {
-        VStack {
-            picker
-            list
-        }
-        .padding()
-        .onAppear {
-            repositoryListViewModel.getLatestRepositoriesFor(username: Constant.User.username)
-        }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: {}) { Image(systemName: "book") }
+        NavigationView {
+            VStack {
+                picker
+                list
+            }
+            .padding()
+            .onAppear {
+                repositoryListViewModel.getLatestRepositoriesFor(username: Constant.User.username)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { print("Tapped plus") }) { Image(systemName: "plus") }
+                }
             }
         }
     }
