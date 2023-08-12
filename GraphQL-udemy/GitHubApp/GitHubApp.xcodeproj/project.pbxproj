@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10BC9AE2A882C5200F173D9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10BC9AD2A882C5200F173D9 /* Constant.swift */; };
+		A10BC9B12A882D4D00F173D9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10BC9B02A882D4D00F173D9 /* Network.swift */; };
+		A10BC9B32A882F4400F173D9 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10BC9B22A882F4400F173D9 /* RepositoryListViewModel.swift */; };
 		A11812ED2A5C8F7B000A122F /* GitHubAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11812EC2A5C8F7B000A122F /* GitHubAppApp.swift */; };
 		A11812EF2A5C8F7B000A122F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11812EE2A5C8F7B000A122F /* ContentView.swift */; };
 		A11812F12A5C8F7C000A122F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11812F02A5C8F7C000A122F /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A10BC9AD2A882C5200F173D9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A10BC9B02A882D4D00F173D9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		A10BC9B22A882F4400F173D9 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		A11812E92A5C8F7B000A122F /* GitHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11812EC2A5C8F7B000A122F /* GitHubAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppApp.swift; sourceTree = "<group>"; };
 		A11812EE2A5C8F7B000A122F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +46,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A10BC9A72A882BEC00F173D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A10BC9A82A882BF000F173D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A10BC9A92A882C2100F173D9 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		A10BC9AA2A882C2B00F173D9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A10BC9B22A882F4400F173D9 /* RepositoryListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A10BC9AB2A882C3400F173D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A10BC9AC2A882C4400F173D9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A10BC9AD2A882C5200F173D9 /* Constant.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A10BC9AF2A882D4200F173D9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A10BC9B02A882D4D00F173D9 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		A11812E02A5C8F7B000A122F = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +119,13 @@
 		A11812EB2A5C8F7B000A122F /* GitHubApp */ = {
 			isa = PBXGroup;
 			children = (
+				A10BC9AF2A882D4200F173D9 /* Network */,
+				A10BC9A72A882BEC00F173D9 /* Models */,
+				A10BC9A82A882BF000F173D9 /* Views */,
+				A10BC9A92A882C2100F173D9 /* Pages */,
+				A10BC9AA2A882C2B00F173D9 /* ViewModels */,
+				A10BC9AB2A882C3400F173D9 /* Extensions */,
+				A10BC9AC2A882C4400F173D9 /* Utils */,
 				A11812EC2A5C8F7B000A122F /* GitHubAppApp.swift */,
 				A11812EE2A5C8F7B000A122F /* ContentView.swift */,
 				A11812F02A5C8F7C000A122F /* Assets.xcassets */,
@@ -166,6 +231,9 @@
 			files = (
 				A11812EF2A5C8F7B000A122F /* ContentView.swift in Sources */,
 				A11812ED2A5C8F7B000A122F /* GitHubAppApp.swift in Sources */,
+				A10BC9B12A882D4D00F173D9 /* Network.swift in Sources */,
+				A10BC9AE2A882C5200F173D9 /* Constant.swift in Sources */,
+				A10BC9B32A882F4400F173D9 /* RepositoryListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
