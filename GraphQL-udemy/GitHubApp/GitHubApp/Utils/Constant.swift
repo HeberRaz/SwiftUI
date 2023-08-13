@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Security
 
 struct Constant {
     struct User {
@@ -13,6 +14,11 @@ struct Constant {
     }
 
     struct APIKey {
-        static let gitHubAccessToken = "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"
+        static var gitHubAccessToken: String {
+            guard let tokenData = KeyChainHelper.shared.read(service: "access-token", account: "GitHub"),
+                  let token = String(data: tokenData, encoding: .utf8)
+            else { return "" }
+            return token
+        }
     }
 }
