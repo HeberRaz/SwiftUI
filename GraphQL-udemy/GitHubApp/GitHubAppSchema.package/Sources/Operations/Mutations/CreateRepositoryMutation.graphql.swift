@@ -8,7 +8,7 @@ public class CreateRepositoryMutation: GraphQLMutation {
   public static let document: ApolloAPI.DocumentType = .notPersisted(
     definition: .init(
       #"""
-      mutation CreateRepository($name: String!, $description: String, $visibility: RepositoryVisibility!, $clientMutationId: String) {
+      mutation CreateRepository($name: String!, $description: String, $visibility: RepositoryVisibility!, $clientMutationId: String!) {
         createRepository(
           input: {name: $name, visibility: $visibility, description: $description, clientMutationId: $clientMutationId}
         ) {
@@ -22,13 +22,13 @@ public class CreateRepositoryMutation: GraphQLMutation {
   public var name: String
   public var description: GraphQLNullable<String>
   public var visibility: GraphQLEnum<RepositoryVisibility>
-  public var clientMutationId: GraphQLNullable<String>
+  public var clientMutationId: String
 
   public init(
     name: String,
     description: GraphQLNullable<String>,
     visibility: GraphQLEnum<RepositoryVisibility>,
-    clientMutationId: GraphQLNullable<String>
+    clientMutationId: String
   ) {
     self.name = name
     self.description = description
