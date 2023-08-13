@@ -1,6 +1,6 @@
-query AllRepositoriesByUsername($username: String!) {
+query AllRepositoriesByUsername($username: String!, $last: Int = 10) {
   user(login: $username) {
-    repositories(last: 10) {
+    repositories(last: $last) {
       nodes {
         id
         name
@@ -10,5 +10,16 @@ query AllRepositoriesByUsername($username: String!) {
         stargazerCount
       }
     }
+  }
+}
+
+mutation CreateRepository($name: String!, $description: String, $visibility: RepositoryVisibility!, $clientMutationId: String) {
+  createRepository(input: {
+    name: $name,
+    visibility: $visibility,
+    description:$description,
+    clientMutationId: $clientMutationId
+  }) {
+    clientMutationId
   }
 }

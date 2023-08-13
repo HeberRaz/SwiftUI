@@ -266,6 +266,8 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     case "UserStatus": return GitHubAppSchema.Objects.UserStatus
     case "VerifiableDomain": return GitHubAppSchema.Objects.VerifiableDomain
     case "RepositoryConnection": return GitHubAppSchema.Objects.RepositoryConnection
+    case "Mutation": return GitHubAppSchema.Objects.Mutation
+    case "CreateRepositoryPayload": return GitHubAppSchema.Objects.CreateRepositoryPayload
     default: return nil
     }
   }

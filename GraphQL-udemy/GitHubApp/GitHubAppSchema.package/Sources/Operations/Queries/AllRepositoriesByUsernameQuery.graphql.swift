@@ -8,10 +8,10 @@ public class AllRepositoriesByUsernameQuery: GraphQLQuery {
   public static let document: ApolloAPI.DocumentType = .notPersisted(
     definition: .init(
       #"""
-      query AllRepositoriesByUsername($username: String!) {
+      query AllRepositoriesByUsername($username: String!, $last: Int = 10) {
         user(login: $username) {
           __typename
-          repositories(last: 10) {
+          repositories(last: $last) {
             __typename
             nodes {
               __typename
@@ -29,12 +29,20 @@ public class AllRepositoriesByUsernameQuery: GraphQLQuery {
     ))
 
   public var username: String
+  public var last: GraphQLNullable<Int>
 
-  public init(username: String) {
+  public init(
+    username: String,
+    last: GraphQLNullable<Int> = 10
+  ) {
     self.username = username
+    self.last = last
   }
 
-  public var __variables: Variables? { ["username": username] }
+  public var __variables: Variables? { [
+    "username": username,
+    "last": last
+  ] }
 
   public struct Data: GitHubAppSchema.SelectionSet {
     public let __data: DataDict
@@ -58,7 +66,7 @@ public class AllRepositoriesByUsernameQuery: GraphQLQuery {
       public static var __parentType: ApolloAPI.ParentType { GitHubAppSchema.Objects.User }
       public static var __selections: [ApolloAPI.Selection] { [
         .field("__typename", String.self),
-        .field("repositories", Repositories.self, arguments: ["last": 10]),
+        .field("repositories", Repositories.self, arguments: ["last": .variable("last")]),
       ] }
 
       /// A list of repositories that the user owns.
