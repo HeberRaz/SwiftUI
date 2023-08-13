@@ -8,7 +8,7 @@ public class AllRepositoriesByUsernameQuery: GraphQLQuery {
   public static let document: ApolloAPI.DocumentType = .notPersisted(
     definition: .init(
       #"""
-      query AllRepositoriesByUsername($username: String!, $last: Int = 10) {
+      query AllRepositoriesByUsername($username: String!, $last: Int!) {
         user(login: $username) {
           __typename
           repositories(last: $last) {
@@ -29,11 +29,11 @@ public class AllRepositoriesByUsernameQuery: GraphQLQuery {
     ))
 
   public var username: String
-  public var last: GraphQLNullable<Int>
+  public var last: Int
 
   public init(
     username: String,
-    last: GraphQLNullable<Int> = 10
+    last: Int
   ) {
     self.username = username
     self.last = last

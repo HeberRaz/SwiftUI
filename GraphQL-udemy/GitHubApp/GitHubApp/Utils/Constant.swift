@@ -13,6 +13,6 @@ struct Constant {
     }
 
     struct APIKey {
-        static let gitHubAccessToken = "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"
+        static let gitHubAccessToken = "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"
     }
 }

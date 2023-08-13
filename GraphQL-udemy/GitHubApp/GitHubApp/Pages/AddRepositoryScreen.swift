@@ -10,6 +10,8 @@ import Combine
 
 struct AddRepositoryScreen: View {
     @Environment(\.isPresented) var isPresented
+    @StateObject var viewModel = AddRepositoryViewModel()
+
     @State private var name = ""
     @State private var description = ""
     @State private var visibility = "public"
@@ -24,6 +26,15 @@ struct AddRepositoryScreen: View {
                 Text("Private").tag("private")
             }
             .pickerStyle(.segmented)
+
+            HStack {
+                Spacer()
+                Button("Save") {
+
+                }
+                Spacer()
+            }
         }
+        .navigationTitle("Add Repository")
     }
 }

@@ -1,4 +1,4 @@
-query AllRepositoriesByUsername($username: String!, $last: Int = 10) {
+query AllRepositoriesByUsername($username: String!, $last: Int!) {
   user(login: $username) {
     repositories(last: $last) {
       nodes {
