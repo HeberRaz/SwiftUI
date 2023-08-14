@@ -9,8 +9,6 @@ import GitHubAppSchema
 import Foundation
 import Apollo
 
-typealias Node = AllRepositoriesByUsernameQuery.Data.User.Repositories.Node
-
 class RepositoryListViewModel: ObservableObject {
     @Published var repositories = [RepositoryViewModel]()
 
@@ -42,6 +40,9 @@ class RepositoryListViewModel: ObservableObject {
                       let user = data.user,
                       let nodes = user.repositories.nodes
                 else { return }
+                DispatchQueue.main.async {
+                    self.repositories = nodes.compactMap { $0 }.map(RepositoryViewModel.init)
+                }
             case .failure(let error):
                 print("error", error)
             }

@@ -9,7 +9,7 @@ import GitHubAppSchema
 import Foundation
 
 struct RepositoryViewModel {
-    let node: Node
+    let node: RepositoryNode
 
     var id: ID {
         node.id
