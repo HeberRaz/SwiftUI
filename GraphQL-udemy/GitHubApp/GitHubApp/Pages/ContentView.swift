@@ -5,18 +5,19 @@
 //  Created by Heber Alvarez on 10/07/23.
 //
 
+import Combine
 import SwiftUI
 
 struct ContentView: View {
-    @State private var repositoriesDisplay: String = "latest"
     @State private var isPresented: Bool = false
+    @State private var cancellable: AnyCancellable?
     @StateObject private var repositoryListViewModel = RepositoryListViewModel()
 
     // MARK: Private views
     @ViewBuilder private var picker: some View {
-        Picker("Select", selection: $repositoriesDisplay) {
-            Text("Latest").tag("latest")
-            Text("Top").tag("top")
+        Picker("Select", selection: $repositoryListViewModel.repositoryDisplay) {
+            Text("Latest").tag(RepositoryDisplay.latest)
+            Text("Top").tag(RepositoryDisplay.top)
         }
         .pickerStyle(.segmented)
     }
@@ -51,7 +52,14 @@ struct ContentView: View {
             }
             .padding()
             .onAppear {
-                repositoryListViewModel.getLatestRepositoriesFor(username: Constant.User.username)
+                self.cancellable = repositoryListViewModel.$repositoryDisplay.sink { display in
+                    switch display {
+                    case .top:
+                        repositoryListViewModel.getTopRepositoriesFor(username: Constant.User.username)
+                    case .latest:
+                        repositoryListViewModel.getLatestRepositoriesFor(username: Constant.User.username)
+                    }
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
