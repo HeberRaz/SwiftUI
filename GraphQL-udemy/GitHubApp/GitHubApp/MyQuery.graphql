@@ -13,6 +13,27 @@ query AllRepositoriesByUsername($username: String!, $last: Int!) {
   }
 }
 
+query TopRepositoriesForUsername($username: String!, $first: Int!) {
+  user(login:$username) {
+    repositories(
+      first: $first,
+      orderBy: {
+        field: STARGAZERS
+        direction: ASC
+      }
+    ) {
+      nodes {
+        id
+        name
+        createdAt
+        description
+        url
+        stargazerCount
+      }
+    }
+  }
+}
+
 mutation CreateRepository($name: String!, $description: String, $visibility: RepositoryVisibility!, $clientMutationId: String!) {
   createRepository(input: {
     name: $name,

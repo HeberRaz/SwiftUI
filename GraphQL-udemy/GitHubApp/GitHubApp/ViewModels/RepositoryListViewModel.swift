@@ -21,7 +21,6 @@ class RepositoryListViewModel: ObservableObject {
         ) { result in
             switch result {
             case .success(let graphQlResult):
-                print("success", graphQlResult)
                 guard let data = graphQlResult.data,
                       let user = data.user,
                       let nodes = user.repositories.nodes
@@ -29,6 +28,20 @@ class RepositoryListViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.repositories = nodes.compactMap { $0 }.map(RepositoryViewModel.init)
                 }
+            case .failure(let error):
+                print("error", error)
+            }
+        }
+    }
+
+    func getTopRepositoriesFor(username: String) {
+        Network.shared.apollo.fetch(query: TopRepositoriesForUsernameQuery(username: username, first: 5)) { result in
+            switch result {
+            case .success(let graphQlResult):
+                guard let data = graphQlResult.data,
+                      let user = data.user,
+                      let nodes = user.repositories.nodes
+                else { return }
             case .failure(let error):
                 print("error", error)
             }
