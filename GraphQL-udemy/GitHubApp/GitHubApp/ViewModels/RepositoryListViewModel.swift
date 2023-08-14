@@ -15,7 +15,10 @@ class RepositoryListViewModel: ObservableObject {
     @Published var repositories = [RepositoryViewModel]()
 
     func getLatestRepositoriesFor(username: String) {
-        Network.shared.apollo.fetch(query: AllRepositoriesByUsernameQuery(username: username, last: 10)) { result in
+        Network.shared.apollo.fetch(
+            query: AllRepositoriesByUsernameQuery(username: username, last: 10),
+            cachePolicy: .fetchIgnoringCacheData
+        ) { result in
             switch result {
             case .success(let graphQlResult):
                 print("success", graphQlResult)

@@ -10,16 +10,16 @@ import GitHubAppSchema
 
 class AddRepositoryViewModel: ObservableObject {
     var name = ""
-    var description: GraphQLNullable<String> = ""
-    var visiblity: GraphQLEnum<RepositoryVisibility> = .case(.public)
+    var description: String = ""
+    var visiblity: RepositoryVisibility = .private
     @Published var errors = [ErrorViewModel]()
 
     func saveRepository(completion: @escaping () -> Void) {
         Network.shared.apollo.perform(
             mutation: CreateRepositoryMutation(
                 name: name,
-                description: description,
-                visibility: visiblity,
+                description: GraphQLNullable(stringLiteral: description),
+                visibility: GraphQLEnum.case(visiblity),
                 clientMutationId: UUID().uuidString
             )
         ) { result in

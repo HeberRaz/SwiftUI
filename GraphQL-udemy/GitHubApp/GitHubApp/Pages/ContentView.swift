@@ -55,9 +55,20 @@ struct ContentView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { print("Tapped plus") }) { Image(systemName: "plus") }
+                    Button(
+                        action: {
+                            isPresented = true
+                        }) {
+                        Image(systemName: "plus")
+                    }
                 }
             }
+            .sheet(isPresented: $isPresented, onDismiss: {
+                repositoryListViewModel.getLatestRepositoriesFor(username: Constant.User.username)
+            }, content: {
+                AddRepositoryScreen()
+            })
+            .navigationTitle("Repositories")
         }
     }
 }
