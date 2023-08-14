@@ -11,6 +11,7 @@ import Apollo
 
 class RepositoryListViewModel: ObservableObject {
     @Published var repositories = [RepositoryViewModel]()
+    @Published var repositoryDisplay: RepositoryDisplay = .latest
 
     func getLatestRepositoriesFor(username: String) {
         Network.shared.apollo.fetch(
