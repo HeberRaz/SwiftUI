@@ -23,6 +23,7 @@
 		A1A8453E2A8CA72B00A325FB /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8453D2A8CA72B00A325FB /* MovieListView.swift */; };
 		A1A845402A8CA73800A325FB /* NoResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8453F2A8CA73800A325FB /* NoResultView.swift */; };
 		A1A845422A8CA74400A325FB /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845412A8CA74400A325FB /* URLImage.swift */; };
+		A1A845452A8CA8D200A325FB /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = A1A845442A8CA8D200A325FB /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A845452A8CA8D200A325FB /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +193,9 @@
 			dependencies = (
 			);
 			name = MoviesApp;
+			packageProductDependencies = (
+				A1A845442A8CA8D200A325FB /* Apollo */,
+			);
 			productName = MoviesApp;
 			productReference = A1A844BB2A8C9E8700A325FB /* MoviesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +224,9 @@
 				Base,
 			);
 			mainGroup = A1A844B22A8C9E8700A325FB;
+			packageReferences = (
+				A1A845432A8CA8D200A325FB /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = A1A844BC2A8C9E8700A325FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -459,6 +467,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1A845432A8CA8D200A325FB /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1A845442A8CA8D200A325FB /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1A845432A8CA8D200A325FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1A844B32A8C9E8700A325FB /* Project object */;
 }
