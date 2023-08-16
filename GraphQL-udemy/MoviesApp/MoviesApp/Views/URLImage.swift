@@ -1,5 +1,5 @@
 //
-//  URLImage1.swift
+//  URLImage.swift
 //  MoviesApp
 //
 //  Created by Heber Alvarez on 16/08/23.

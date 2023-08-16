@@ -1,5 +1,5 @@
 //
-//  FartCounter1.swift
+//  FartCounter.swift
 //  MoviesApp
 //
 //  Created by Heber Alvarez on 16/08/23.

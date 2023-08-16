@@ -1,5 +1,5 @@
 //
-//  MovieListView1.swift
+//  MovieListView.swift
 //  MoviesApp
 //
 //  Created by Heber Alvarez on 16/08/23.
