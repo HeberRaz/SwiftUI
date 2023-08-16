@@ -11,18 +11,18 @@
 		A1A844C12A8C9E8700A325FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A844C02A8C9E8700A325FB /* ContentView.swift */; };
 		A1A844C32A8C9E8900A325FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A844C22A8C9E8900A325FB /* Assets.xcassets */; };
 		A1A844C62A8C9E8900A325FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A844C52A8C9E8900A325FB /* Preview Assets.xcassets */; };
-		A1A845052A8CA21E00A325FB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845042A8CA21E00A325FB /* String+Extensions.swift */; };
-		A1A845072A8CA22500A325FB /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845062A8CA22500A325FB /* View+Extensions.swift */; };
-		A1A845182A8CA2AB00A325FB /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A1A845152A8CA2AB00A325FB /* Queries.graphql */; };
-		A1A845192A8CA2AB00A325FB /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845162A8CA2AB00A325FB /* Apollo.swift */; };
-		A1A8451B2A8CA2DA00A325FB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8451A2A8CA2DA00A325FB /* ImageLoader.swift */; };
-		A1A8451E2A8CA2EE00A325FB /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8451C2A8CA2EE00A325FB /* MovieListScreen.swift */; };
-		A1A8451F2A8CA2EE00A325FB /* AddMovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8451D2A8CA2EE00A325FB /* AddMovieScreen.swift */; };
-		A1A845222A8CA30E00A325FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845212A8CA30E00A325FB /* Constants.swift */; };
-		A1A845272A8CA31F00A325FB /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845232A8CA31F00A325FB /* MovieListView.swift */; };
-		A1A845282A8CA31F00A325FB /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845242A8CA31F00A325FB /* URLImage.swift */; };
-		A1A845292A8CA31F00A325FB /* NoResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845252A8CA31F00A325FB /* NoResultView.swift */; };
-		A1A8452A2A8CA31F00A325FB /* FartCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845262A8CA31F00A325FB /* FartCounter.swift */; };
+		A1A8452C2A8CA4FD00A325FB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8452B2A8CA4FD00A325FB /* String+Extensions.swift */; };
+		A1A8452E2A8CA54A00A325FB /* VIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8452D2A8CA54A00A325FB /* VIew+Extensions.swift */; };
+		A1A845302A8CA59B00A325FB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8452F2A8CA59B00A325FB /* Network.swift */; };
+		A1A845322A8CA5D100A325FB /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = A1A845312A8CA5D100A325FB /* Queries.graphql */; };
+		A1A845342A8CA62900A325FB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845332A8CA62900A325FB /* ImageLoader.swift */; };
+		A1A845362A8CA65800A325FB /* AddMovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845352A8CA65800A325FB /* AddMovieScreen.swift */; };
+		A1A845382A8CA66300A325FB /* AddMovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845372A8CA66300A325FB /* AddMovieListScreen.swift */; };
+		A1A8453A2A8CA6E900A325FB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845392A8CA6E900A325FB /* Constant.swift */; };
+		A1A8453C2A8CA72400A325FB /* FartCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8453B2A8CA72400A325FB /* FartCounter.swift */; };
+		A1A8453E2A8CA72B00A325FB /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8453D2A8CA72B00A325FB /* MovieListView.swift */; };
+		A1A845402A8CA73800A325FB /* NoResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8453F2A8CA73800A325FB /* NoResultView.swift */; };
+		A1A845422A8CA74400A325FB /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845412A8CA74400A325FB /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,18 +31,18 @@
 		A1A844C02A8C9E8700A325FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1A844C22A8C9E8900A325FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1A844C52A8C9E8900A325FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A1A845042A8CA21E00A325FB /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "../../../../../../Downloads/MoviesApp/MoviesApp/Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
-		A1A845062A8CA22500A325FB /* View+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "View+Extensions.swift"; path = "../../../../../../Downloads/MoviesApp/MoviesApp/Extensions/View+Extensions.swift"; sourceTree = "<group>"; };
-		A1A845152A8CA2AB00A325FB /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Queries.graphql; path = ../../../../../../Downloads/MoviesApp/MoviesApp/GraphQL/Queries.graphql; sourceTree = "<group>"; };
-		A1A845162A8CA2AB00A325FB /* Apollo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Apollo.swift; path = ../../../../../../Downloads/MoviesApp/MoviesApp/GraphQL/Apollo.swift; sourceTree = "<group>"; };
-		A1A8451A2A8CA2DA00A325FB /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = ../../../../../../Downloads/MoviesApp/MoviesApp/Loaders/ImageLoader.swift; sourceTree = "<group>"; };
-		A1A8451C2A8CA2EE00A325FB /* MovieListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieListScreen.swift; path = ../../../../../../Downloads/MoviesApp/MoviesApp/Screens/MovieListScreen.swift; sourceTree = "<group>"; };
-		A1A8451D2A8CA2EE00A325FB /* AddMovieScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMovieScreen.swift; path = ../../../../../../Downloads/MoviesApp/MoviesApp/Screens/AddMovieScreen.swift; sourceTree = "<group>"; };
-		A1A845212A8CA30E00A325FB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../../../../../../Downloads/MoviesApp/MoviesApp/Utils/Constants.swift; sourceTree = "<group>"; };
-		A1A845232A8CA31F00A325FB /* MovieListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieListView.swift; path = ../../../../../../Downloads/MoviesApp/MoviesApp/Views/MovieListView.swift; sourceTree = "<group>"; };
-		A1A845242A8CA31F00A325FB /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLImage.swift; path = ../../../../../../Downloads/MoviesApp/MoviesApp/Views/URLImage.swift; sourceTree = "<group>"; };
-		A1A845252A8CA31F00A325FB /* NoResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoResultView.swift; path = ../../../../../../Downloads/MoviesApp/MoviesApp/Views/NoResultView.swift; sourceTree = "<group>"; };
-		A1A845262A8CA31F00A325FB /* FartCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FartCounter.swift; path = ../../../../../../Downloads/MoviesApp/MoviesApp/Views/FartCounter.swift; sourceTree = "<group>"; };
+		A1A8452B2A8CA4FD00A325FB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		A1A8452D2A8CA54A00A325FB /* VIew+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VIew+Extensions.swift"; sourceTree = "<group>"; };
+		A1A8452F2A8CA59B00A325FB /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		A1A845312A8CA5D100A325FB /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		A1A845332A8CA62900A325FB /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		A1A845352A8CA65800A325FB /* AddMovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieScreen.swift; sourceTree = "<group>"; };
+		A1A845372A8CA66300A325FB /* AddMovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieListScreen.swift; sourceTree = "<group>"; };
+		A1A845392A8CA6E900A325FB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A1A8453B2A8CA72400A325FB /* FartCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FartCounter.swift; sourceTree = "<group>"; };
+		A1A8453D2A8CA72B00A325FB /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		A1A8453F2A8CA73800A325FB /* NoResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultView.swift; sourceTree = "<group>"; };
+		A1A845412A8CA74400A325FB /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +103,8 @@
 		A1A845032A8CA20500A325FB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A1A845042A8CA21E00A325FB /* String+Extensions.swift */,
-				A1A845062A8CA22500A325FB /* View+Extensions.swift */,
+				A1A8452B2A8CA4FD00A325FB /* String+Extensions.swift */,
+				A1A8452D2A8CA54A00A325FB /* VIew+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,8 +112,8 @@
 		A1A845082A8CA23200A325FB /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
-				A1A845162A8CA2AB00A325FB /* Apollo.swift */,
-				A1A845152A8CA2AB00A325FB /* Queries.graphql */,
+				A1A8452F2A8CA59B00A325FB /* Network.swift */,
+				A1A845312A8CA5D100A325FB /* Queries.graphql */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -121,10 +121,10 @@
 		A1A8450D2A8CA24900A325FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A1A845262A8CA31F00A325FB /* FartCounter.swift */,
-				A1A845232A8CA31F00A325FB /* MovieListView.swift */,
-				A1A845252A8CA31F00A325FB /* NoResultView.swift */,
-				A1A845242A8CA31F00A325FB /* URLImage.swift */,
+				A1A8453B2A8CA72400A325FB /* FartCounter.swift */,
+				A1A8453D2A8CA72B00A325FB /* MovieListView.swift */,
+				A1A8453F2A8CA73800A325FB /* NoResultView.swift */,
+				A1A845412A8CA74400A325FB /* URLImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,7 +139,7 @@
 		A1A8450F2A8CA24C00A325FB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A1A845212A8CA30E00A325FB /* Constants.swift */,
+				A1A845392A8CA6E900A325FB /* Constant.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -154,8 +154,8 @@
 		A1A845112A8CA24E00A325FB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				A1A8451D2A8CA2EE00A325FB /* AddMovieScreen.swift */,
-				A1A8451C2A8CA2EE00A325FB /* MovieListScreen.swift */,
+				A1A845352A8CA65800A325FB /* AddMovieScreen.swift */,
+				A1A845372A8CA66300A325FB /* AddMovieListScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 		A1A845132A8CA25100A325FB /* Loaders */ = {
 			isa = PBXGroup;
 			children = (
-				A1A8451A2A8CA2DA00A325FB /* ImageLoader.swift */,
+				A1A845332A8CA62900A325FB /* ImageLoader.swift */,
 			);
 			path = Loaders;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1A845182A8CA2AB00A325FB /* Queries.graphql in Resources */,
+				A1A845322A8CA5D100A325FB /* Queries.graphql in Resources */,
 				A1A844C62A8C9E8900A325FB /* Preview Assets.xcassets in Resources */,
 				A1A844C32A8C9E8900A325FB /* Assets.xcassets in Resources */,
 			);
@@ -246,19 +246,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1A8451F2A8CA2EE00A325FB /* AddMovieScreen.swift in Sources */,
-				A1A8451E2A8CA2EE00A325FB /* MovieListScreen.swift in Sources */,
+				A1A8452E2A8CA54A00A325FB /* VIew+Extensions.swift in Sources */,
 				A1A844C12A8C9E8700A325FB /* ContentView.swift in Sources */,
-				A1A845052A8CA21E00A325FB /* String+Extensions.swift in Sources */,
-				A1A845292A8CA31F00A325FB /* NoResultView.swift in Sources */,
-				A1A8451B2A8CA2DA00A325FB /* ImageLoader.swift in Sources */,
-				A1A845072A8CA22500A325FB /* View+Extensions.swift in Sources */,
+				A1A845382A8CA66300A325FB /* AddMovieListScreen.swift in Sources */,
 				A1A844BF2A8C9E8700A325FB /* MoviesAppApp.swift in Sources */,
-				A1A845272A8CA31F00A325FB /* MovieListView.swift in Sources */,
-				A1A8452A2A8CA31F00A325FB /* FartCounter.swift in Sources */,
-				A1A845192A8CA2AB00A325FB /* Apollo.swift in Sources */,
-				A1A845222A8CA30E00A325FB /* Constants.swift in Sources */,
-				A1A845282A8CA31F00A325FB /* URLImage.swift in Sources */,
+				A1A8453C2A8CA72400A325FB /* FartCounter.swift in Sources */,
+				A1A845402A8CA73800A325FB /* NoResultView.swift in Sources */,
+				A1A8453E2A8CA72B00A325FB /* MovieListView.swift in Sources */,
+				A1A845422A8CA74400A325FB /* URLImage.swift in Sources */,
+				A1A8453A2A8CA6E900A325FB /* Constant.swift in Sources */,
+				A1A8452C2A8CA4FD00A325FB /* String+Extensions.swift in Sources */,
+				A1A845362A8CA65800A325FB /* AddMovieScreen.swift in Sources */,
+				A1A845302A8CA59B00A325FB /* Network.swift in Sources */,
+				A1A845342A8CA62900A325FB /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
