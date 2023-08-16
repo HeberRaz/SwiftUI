@@ -25,6 +25,9 @@
 		A1A845422A8CA74400A325FB /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845412A8CA74400A325FB /* URLImage.swift */; };
 		A1A845452A8CA8D200A325FB /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = A1A845442A8CA8D200A325FB /* Apollo */; };
 		A1A845472A8D4CC400A325FB /* MoviesSchema in Resources */ = {isa = PBXBuildFile; fileRef = A1A845462A8D4CC300A325FB /* MoviesSchema */; };
+		A1A845492A8D4D0700A325FB /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845482A8D4D0700A325FB /* MovieListViewModel.swift */; };
+		A1A8454B2A8D4D2F00A325FB /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8454A2A8D4D2F00A325FB /* MovieViewModel.swift */; };
+		A1A8454E2A8D4D6100A325FB /* MoviesSchema in Frameworks */ = {isa = PBXBuildFile; productRef = A1A8454D2A8D4D6100A325FB /* MoviesSchema */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,8 @@
 		A1A8453F2A8CA73800A325FB /* NoResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultView.swift; sourceTree = "<group>"; };
 		A1A845412A8CA74400A325FB /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		A1A845462A8D4CC300A325FB /* MoviesSchema */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MoviesSchema; sourceTree = "<group>"; };
+		A1A845482A8D4D0700A325FB /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		A1A8454A2A8D4D2F00A325FB /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A8454E2A8D4D6100A325FB /* MoviesSchema in Frameworks */,
 				A1A845452A8CA8D200A325FB /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +72,7 @@
 				A1A845462A8D4CC300A325FB /* MoviesSchema */,
 				A1A844BD2A8C9E8700A325FB /* MoviesApp */,
 				A1A844BC2A8C9E8700A325FB /* Products */,
+				A1A8454C2A8D4D6100A325FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +144,8 @@
 		A1A8450E2A8CA24A00A325FB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A1A845482A8D4D0700A325FB /* MovieListViewModel.swift */,
+				A1A8454A2A8D4D2F00A325FB /* MovieViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -180,6 +189,13 @@
 			path = Loaders;
 			sourceTree = "<group>";
 		};
+		A1A8454C2A8D4D6100A325FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +214,7 @@
 			name = MoviesApp;
 			packageProductDependencies = (
 				A1A845442A8CA8D200A325FB /* Apollo */,
+				A1A8454D2A8D4D6100A325FB /* MoviesSchema */,
 			);
 			productName = MoviesApp;
 			productReference = A1A844BB2A8C9E8700A325FB /* MoviesApp.app */;
@@ -261,6 +278,7 @@
 				A1A8452E2A8CA54A00A325FB /* VIew+Extensions.swift in Sources */,
 				A1A844C12A8C9E8700A325FB /* ContentView.swift in Sources */,
 				A1A845382A8CA66300A325FB /* AddMovieListScreen.swift in Sources */,
+				A1A845492A8D4D0700A325FB /* MovieListViewModel.swift in Sources */,
 				A1A844BF2A8C9E8700A325FB /* MoviesAppApp.swift in Sources */,
 				A1A8453C2A8CA72400A325FB /* FartCounter.swift in Sources */,
 				A1A845402A8CA73800A325FB /* NoResultView.swift in Sources */,
@@ -268,6 +286,7 @@
 				A1A845422A8CA74400A325FB /* URLImage.swift in Sources */,
 				A1A8453A2A8CA6E900A325FB /* Constant.swift in Sources */,
 				A1A8452C2A8CA4FD00A325FB /* String+Extensions.swift in Sources */,
+				A1A8454B2A8D4D2F00A325FB /* MovieViewModel.swift in Sources */,
 				A1A845362A8CA65800A325FB /* AddMovieScreen.swift in Sources */,
 				A1A845302A8CA59B00A325FB /* Network.swift in Sources */,
 				A1A845342A8CA62900A325FB /* ImageLoader.swift in Sources */,
@@ -488,6 +507,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A1A845432A8CA8D200A325FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		A1A8454D2A8D4D6100A325FB /* MoviesSchema */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MoviesSchema;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
