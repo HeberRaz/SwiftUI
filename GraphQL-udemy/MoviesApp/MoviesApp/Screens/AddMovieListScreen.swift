@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct MovieListScreen: View {
+    @StateObject private var viewModel = MovieListViewModel()
     @State private var isPresented: Bool = false
 
     var body: some View {
@@ -21,8 +22,10 @@ struct MovieListScreen: View {
             }.pickerStyle(SegmentedPickerStyle())
             Spacer()
             // Show List of Movies
-            List(1...20, id: \.self) { index in
-                Text("Movie Name \(index)")
+            if !viewModel.movies.isEmpty {
+                MovieListView(movies: viewModel.movies)
+            } else {
+                NoResultView(message: "No movies found")
             }
             Spacer()
         }
@@ -31,6 +34,7 @@ struct MovieListScreen: View {
             AddMovieScreen()
         })
         .onAppear(perform: {
+            viewModel.getAllMovies()
         })
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
