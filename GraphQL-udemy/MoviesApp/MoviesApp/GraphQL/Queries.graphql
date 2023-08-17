@@ -1,9 +1,11 @@
-query AllMovies {
-  movies {
-    genre
+query AllMovies($genre: String = null) {
+  movies(filter: {
+    genre: $genre
+  }) {
     id
-    poster
     title
     year
+    genre
+    poster
   }
 }

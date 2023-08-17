@@ -46,6 +46,10 @@ type Movie {
   poster: String!
 }
 
+input MovieFilter {
+  genre: String
+}
+
 type Query {
-  movies: [Movie]
+  movies(filter: MovieFilter): [Movie]
 }

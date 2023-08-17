@@ -12,14 +12,27 @@ const typeDefs = gql`
         poster: String!
     }
 
+    input MovieFilter {
+        genre: String
+    }
+
     type Query {
-        movies: [Movie]
+        movies(filter: MovieFilter): [Movie]
     }
 `
+const getAllMovies = (filter) => {
+    let filteredMovies = movies
+    if(filter) {
+        if(filter.genre) {
+            filteredMovies = movies.filter(movie => movie.genre == filter.genre)
+        }
+    }
+    return filteredMovies
+}
 
 const resolvers = {
     Query: {
-        movies: () => movies
+        movies: (_, { filter }) => getAllMovies(filter)
     }
 }
 
