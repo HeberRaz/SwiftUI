@@ -10,25 +10,25 @@ import Apollo
 import MoviesSchema
 
 struct MovieViewModel {
+    let id: ID
+    let title: String
+    let year: String
+    let genre: String
+    let poster: String
+
+    init(id: ID, title: String, year: String, genre: String, poster: String) {
+        self.id = id
+        self.title = title
+        self.year = year
+        self.genre = genre
+        self.poster = poster
+    }
+}
+
+struct MovieViewModel2 {
     let movie: AllMoviesQuery.Data.Movie
-
-    var id: ID {
-        movie.id
-    }
-
-    var title: String {
-        movie.title
-    }
-
-    var year: String {
-        movie.year
-    }
 
     var genre: String {
         movie.genre
-    }
-
-    var poster: String {
-        movie.poster
     }
 }

@@ -24,6 +24,7 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     switch typename {
     case "Query": return MoviesSchema.Objects.Query
     case "Movie": return MoviesSchema.Objects.Movie
+    case "Genre": return MoviesSchema.Objects.Genre
     default: return nil
     }
   }

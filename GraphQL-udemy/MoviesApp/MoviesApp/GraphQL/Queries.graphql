@@ -9,3 +9,9 @@ query AllMovies($genre: String = null) {
     poster
   }
 }
+
+query AllGenres {
+  genres {
+    name
+  }
+}
