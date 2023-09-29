@@ -42,10 +42,22 @@ struct Pill: View {
     }
 }
 
+import Combine
+
+struct ListStickyHeaderViewModel {
+    var showSheet = true
+}
+
 struct ListStickyHeader: View {
     @State private var backgroundColor = Color.clear
+    @State private var viewModel: ListStickyHeaderViewModel
     private let stickyHeaderThreshold = 8.0...32.0
     @State private var shadow = Shadow()
+
+    init(viewModel: ListStickyHeaderViewModel) {
+        self._viewModel = State(initialValue: viewModel)
+    }
+
     var body: some View {
         VStack {
             ScrollView {
@@ -56,6 +68,12 @@ struct ListStickyHeader: View {
                         ForEach(0..<10) { item in
                             VStack(alignment: .leading, spacing: 0) {
                                 MyTextBox()
+                                    .sheet(isPresented: $viewModel.showSheet) {
+                                        Text("New sheet presented")
+                                    }
+                                    .onTapGesture {
+                                        viewModel.showSheet.toggle()
+                                    }
                                 Spacer(minLength: 8)
                             }
                         }

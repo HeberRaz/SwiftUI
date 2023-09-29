@@ -11,7 +11,7 @@ import SwiftUI
 struct StickyBarApp: App {
     var body: some Scene {
         WindowGroup {
-            ListStickyHeader()
+            ListStickyHeader(viewModel: ListStickyHeaderViewModel(showSheet: false))
         }
     }
 }
