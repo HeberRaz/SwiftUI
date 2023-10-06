@@ -20,7 +20,19 @@ class MovieListViewModel: ObservableObject {
                       let movies = data.movies
                 else { return }
                 DispatchQueue.main.async {
-                    self.movies = movies.compactMap { $0 }.map(MovieViewModel.init)
+                    for movie in movies {
+                        guard let safeMovie = movie else { return }
+
+                        self.movies.append(
+                            MovieViewModel(
+                                id: safeMovie.id,
+                                title: safeMovie.title,
+                                year: safeMovie.year,
+                                genre: safeMovie.genre,
+                                poster: safeMovie.poster
+                            )
+                        )
+                    }
                 }
             case .failure(let error):
                 print(error)
@@ -28,5 +40,3 @@ class MovieListViewModel: ObservableObject {
         }
     }
 }
-
-

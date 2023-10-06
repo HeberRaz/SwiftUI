@@ -7,10 +7,16 @@ public class AllMoviesQuery: GraphQLQuery {
   public static let operationName: String = "AllMovies"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query AllMovies { movies { __typename genre id poster title year } }"#
+      #"query AllMovies($genre: String = null) { movies(filter: {genre: $genre}) { __typename id title year genre poster } }"#
     ))
 
-  public init() {}
+  public var genre: GraphQLNullable<String>
+
+  public init(genre: GraphQLNullable<String> = .null) {
+    self.genre = genre
+  }
+
+  public var __variables: Variables? { ["genre": genre] }
 
   public struct Data: MoviesSchema.SelectionSet {
     public let __data: DataDict
@@ -18,7 +24,7 @@ public class AllMoviesQuery: GraphQLQuery {
 
     public static var __parentType: ApolloAPI.ParentType { MoviesSchema.Objects.Query }
     public static var __selections: [ApolloAPI.Selection] { [
-      .field("movies", [Movie?]?.self),
+      .field("movies", [Movie?]?.self, arguments: ["filter": ["genre": .variable("genre")]]),
     ] }
 
     public var movies: [Movie?]? { __data["movies"] }
@@ -33,18 +39,18 @@ public class AllMoviesQuery: GraphQLQuery {
       public static var __parentType: ApolloAPI.ParentType { MoviesSchema.Objects.Movie }
       public static var __selections: [ApolloAPI.Selection] { [
         .field("__typename", String.self),
-        .field("genre", String.self),
         .field("id", MoviesSchema.ID.self),
-        .field("poster", String.self),
         .field("title", String.self),
         .field("year", String.self),
+        .field("genre", String.self),
+        .field("poster", String.self),
       ] }
 
-      public var genre: String { __data["genre"] }
       public var id: MoviesSchema.ID { __data["id"] }
-      public var poster: String { __data["poster"] }
       public var title: String { __data["title"] }
       public var year: String { __data["year"] }
+      public var genre: String { __data["genre"] }
+      public var poster: String { __data["poster"] }
     }
   }
 }

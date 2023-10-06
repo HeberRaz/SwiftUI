@@ -51,7 +51,15 @@ struct MovieListView: View {
 }
 
 struct MovieListView_Previews: PreviewProvider {
+    private static let poster = "https://m.media-amazon.com/images/M/MV5BMTdjZTliODYtNWExMi00NjQ1LWIzN2MtN2Q5NTg5NTk3NzliL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+
     static var previews: some View {
-        MovieListView(movies: [])
+        MovieListView(movies: [
+            MovieViewModel(id: "1",
+                           title: "Movie 1",
+                           year: "2000",
+                           genre: "Fiction",
+                           poster: poster)
+        ])
     }
 }

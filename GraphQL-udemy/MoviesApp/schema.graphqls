@@ -38,6 +38,10 @@ directive @connection(
   filter: [String!]
 ) on FIELD
 
+type Genre {
+  name: String!
+}
+
 type Movie {
   id: ID!
   title: String!
@@ -46,6 +50,11 @@ type Movie {
   poster: String!
 }
 
+input MovieFilter {
+  genre: String
+}
+
 type Query {
-  movies: [Movie]
+  movies(filter: MovieFilter): [Movie]
+  genres: [Genre]
 }
