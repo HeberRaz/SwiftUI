@@ -28,12 +28,10 @@ struct MyKeyboard: ViewModifier {
     // MARK: - Helpers
     private func getKeyboardType(from keyboardStyle: KeyboardStyle) -> UIKeyboardType {
         switch keyboardStyle {
-        case .email:
-            return .emailAddress
-        case .name:
-            return .namePhonePad
-        case .phoneNumber:
-            return .phonePad
+        case .alphabetical:
+            return .default
+        case .numerical:
+            return .numbersAndPunctuation
         }
     }
 }

@@ -8,46 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    enum FocusedField {
+        case username, goodbyeText
+    }
+
     @State private var username: String = ""
+    @State private var goodbyeText: String = ""
     @State private var tag: Bool = false
-    @State private var suggestedWords = [""]
+    @FocusState private var focusedField: FocusedField?
+
 
     var body: some View {
-        suggestedWordsImpl()
+        focusImpl()
     }
 
-    func generateSuggestions(userInput: String) -> [String] {
-        // Use your predictive text model to generate suggested words or phrases
-        // based on the user's input
-        var suggestions = [String]()
-        suggestions.append("Heber's Heart <3")
-        return suggestions
-    }
-
-    func suggestedWordsImpl() -> some View {
-        ZStack {
-            HStack {
-                ForEach(suggestedWords, id: \.self) { suggestion in
-                    ZStack {
-                        Color.gray
-                            .frame(width: 428, height: 44)
-                        Text(suggestion)
-                            .background(Color.gray)
-                    }
-
-                }
+    func focusImpl() -> some View {
+        VStack {
+            TextField("username", text: $username)
+                .myKeyboard(with: .alphabetical)
+                .focused($focusedField, equals: .username)
+            TextField("goodbyeText", text: $goodbyeText)
+                .myKeyboard(with: .numerical)
+                .focused($focusedField, equals: .goodbyeText)
+        }
+        .padding()
+        .onSubmit {
+            switch focusedField {
+            case .username:
+                focusedField = .goodbyeText
+            default:
+                break
             }
-            .position(x: 214, y: 556)
-
-            VStack {
-                TextField("Username", text: $username, onEditingChanged: { value in
-                    suggestedWords = generateSuggestions(userInput: $username.wrappedValue)
-                })
-                    .myKeyboard(with: .name)
-                TextField("Surname", text: $username)
-                    .myKeyboard(with: .phoneNumber)
-            }
-            .padding()
         }
     }
 }

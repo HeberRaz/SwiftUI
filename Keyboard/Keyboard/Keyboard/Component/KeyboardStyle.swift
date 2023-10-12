@@ -8,7 +8,6 @@
 import Foundation
 
 enum KeyboardStyle {
-    case name
-    case email
-    case phoneNumber
+    case alphabetical
+    case numerical
 }
