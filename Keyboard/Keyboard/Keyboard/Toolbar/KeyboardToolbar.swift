@@ -13,28 +13,41 @@ struct KeyboardToolbar<ToolbarView: View>: ViewModifier {
     @State var  height: CGFloat = 0
     private let toolbarView: ToolbarView
     @State var showContent = false
-
     init(@ViewBuilder toolbar: () -> ToolbarView) {
         self.toolbarView = toolbar()
     }
 
     func body(content: Content) -> some View {
-        ZStack {
-                content
-            if showContent {
-                toolbarView
-                    .background(Color.blue)
-                    .position(x: 214, y: 156)
+        ZStack(alignment: .bottom) {
+            VStack {
+                GeometryReader { geometry in
+                    VStack {
+                        content
+                    }
+                    .frame(width: geometry.size.width, height: geometry.size.height - height)
+                }
+                if showContent {
+                    toolbarView
+                        .background(
+                            GeometryReader { proxy in
+                                Color.clear
+                                    .onChange(of: proxy.size.height, perform: { newValue in
+                                        height = newValue
+                                    })
+                            }
+                        )
+                }
             }
         }
-        .background(Color.orange)
         .onReceive(Publishers.keyboardRect, perform: { newValue in
             if newValue == true {
                 showContent = true
             } else {
                 showContent = false
             }
+
         })
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
