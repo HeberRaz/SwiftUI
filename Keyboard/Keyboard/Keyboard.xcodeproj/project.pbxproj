@@ -63,7 +63,6 @@
 		A13635E22AC769B200E6FFF8 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				A1A79E212ACB3D6700528F70 /* Helpers */,
 				A1A79E222ACB3D6F00528F70 /* View */,
 				A13635F62AC76C5100E6FFF8 /* Component */,
 				A13635F52AC76C4D00E6FFF8 /* Toolbar */,
@@ -98,13 +97,6 @@
 				A13635F32AC76A6600E6FFF8 /* KeyboardStyle.swift */,
 			);
 			path = Component;
-			sourceTree = "<group>";
-		};
-		A1A79E212ACB3D6700528F70 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A1A79E222ACB3D6F00528F70 /* View */ = {
