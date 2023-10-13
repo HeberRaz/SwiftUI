@@ -56,32 +56,30 @@ struct ContentView: View {
         VStack {
             FocusableTextField($focusableTextField, tag: 0, placeholder: "focus 1") { (textfield, string) in
                 print(string)
-//                if string.count > 3 {
-//                    textfield.next(textfield)
-//                }
-            } didEndEditing: {
-                print("focus 1")
             }
             .frame(height: 24)
 
             FocusableTextField($focusableTextField, tag: 1, placeholder: "focus 2") {  (textfield, string) in
                 print(string)
-            } didEndEditing: {
-                print("focus 2")
             }
             .frame(height: 24)
 
             FocusableTextField($focusableTextField, tag: 2, placeholder: "focus 3") {  (textfield, string) in
                 print(string)
-            } didEndEditing: {
-                print("focus 3")
             }
             .frame(height: 24)
         }
         .keyboardToolbar {
             HStack {
-                Button("Tap me") {
-                    focusableTextField.next(focusableTextField)
+                Text("El emi es chido")
+                if let next = focusableTextField.superview?.superview?.viewWithTag(focusableTextField.tag + 1) as? UITextField {
+                    Button("Tap me") {
+                        focusableTextField.next(focusableTextField)
+                    }
+                } else {
+                    Button("Fui el ultimo tulipan") {
+                        focusableTextField.next(focusableTextField)
+                    }
                 }
             }
         }
