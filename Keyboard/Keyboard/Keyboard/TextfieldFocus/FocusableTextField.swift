@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct FocusableTextField: UIViewRepresentable {
-    private let tmpView = WrappableTextField()
+    private let wrappableTextField = WrappableTextField()
 
     @Binding var focusableTextField: UITextField
     var tag: Int
     var placeholder: String?
     var changeHandler: ((UITextField, String)->Void)?
-    var didEndEditing: (()->Void)?
+    var didEndEditing: (() -> Void)?
     var didBeginEditing: (() -> Void)?
 
     init(_ focusableTextField: Binding<UITextField>,
@@ -25,13 +25,13 @@ struct FocusableTextField: UIViewRepresentable {
     }
 
     func makeUIView(context: UIViewRepresentableContext<FocusableTextField>) -> WrappableTextField {
-        tmpView.tag = tag
-        tmpView.delegate = tmpView
-        tmpView.placeholder = placeholder
-        tmpView.didEndEditing = didEndEditing
-        tmpView.onChange = changeHandler
-        tmpView.focusableTextField = $focusableTextField
-        return tmpView
+        wrappableTextField.tag = tag
+        wrappableTextField.delegate = wrappableTextField
+        wrappableTextField.placeholder = placeholder
+        wrappableTextField.didEndEditing = didEndEditing
+        wrappableTextField.onChange = changeHandler
+        wrappableTextField.focusableTextField = $focusableTextField
+        return wrappableTextField
     }
 
     func updateUIView(_ uiView: WrappableTextField, context: UIViewRepresentableContext<FocusableTextField>) {
@@ -40,6 +40,7 @@ struct FocusableTextField: UIViewRepresentable {
 
 extension UITextField {
     @objc func next(_ textField: UITextField) {}
+    @objc func previous(_ textField: UITextField) {}
 }
 
 class WrappableTextField: UITextField, UITextFieldDelegate {
@@ -58,9 +59,13 @@ class WrappableTextField: UITextField, UITextFieldDelegate {
         return false
     }
 
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        focusableTextField.wrappedValue = textField
-        didEndEditing?()
+    func textFieldShouldReturnPrevious(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.superview?.viewWithTag(textField.tag - 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -71,13 +76,21 @@ class WrappableTextField: UITextField, UITextFieldDelegate {
         return true
     }
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        focusableTextField.wrappedValue = textField
+        didEndEditing?()
+    }
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.endEditing(true)
         didEndEditing?()
     }
 
-
     @objc override func next(_ textField: UITextField) {
         _ = textFieldShouldReturn(textField)
+    }
+
+    @objc override func previous(_ textField: UITextField) {
+        _ = textFieldShouldReturnPrevious(textField)
     }
 }
