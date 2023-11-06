@@ -64,7 +64,7 @@ struct ContentView: View {
                 print(string)
             }
             .frame(height: 24)
-
+            Text("Hola vamos a probar algo")
             FocusableTextField($focusableTextField, tag: 2, placeholder: "focus 3") {  (textfield, string) in
                 print(string)
             }
@@ -75,9 +75,10 @@ struct ContentView: View {
             }
             .frame(height: 24)
         }
+        .padding()
         .keyboardToolbar {
             HStack {
-                Text("El emi es chido - ")
+                Text("Testing - ")
                 if let next = focusableTextField.superview?.superview?.viewWithTag(focusableTextField.tag + 1) as? UITextField {
                     // Baja
                     Button(action: {
@@ -91,9 +92,20 @@ struct ContentView: View {
                     }) {
                         Image(systemName: "chevron.up")
                     }
+                    .disabled(focusableTextField.tag == 0)
                 } else {
-                    Button("Fui el ultimo tulipan") {
+                    // Baja
+                    Button(action: {
                         focusableTextField.next(focusableTextField)
+                    }) {
+                        Image(systemName: "chevron.down")
+                    }
+                    .disabled(true)
+
+                    Button(action: {
+                        focusableTextField.previous(focusableTextField)
+                    }) {
+                        Image(systemName: "chevron.up")
                     }
                 }
             }

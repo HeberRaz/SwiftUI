@@ -60,12 +60,16 @@ class WrappableTextField: UITextField, UITextFieldDelegate {
     }
 
     func textFieldShouldReturnPrevious(_ textField: UITextField) -> Bool {
-        if let nextField = textField.superview?.superview?.viewWithTag(textField.tag - 1) as? UITextField {
-            nextField.becomeFirstResponder()
+        if let previousTextField = textField.superview?.superview?.viewWithTag(textField.tag - 1) as? UITextField {
+            previousTextField.becomeFirstResponder()
         } else {
-            textField.resignFirstResponder()
+            if textField.tag - 1 == 0 {
+                (textField.superview?.superview?.viewWithTag(0)?.subviews[0].subviews.first as? UITextField)?.becomeFirstResponder()
+            } else {
+                textField.resignFirstResponder()
+            }
         }
-        return false
+        return true
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
