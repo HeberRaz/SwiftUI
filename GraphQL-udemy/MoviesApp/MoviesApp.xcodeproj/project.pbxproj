@@ -30,6 +30,7 @@
 		A1A8454E2A8D4D6100A325FB /* MoviesSchema in Frameworks */ = {isa = PBXBuildFile; productRef = A1A8454D2A8D4D6100A325FB /* MoviesSchema */; };
 		A1A845502A8DF90600A325FB /* GenreListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8454F2A8DF90600A325FB /* GenreListViewModel.swift */; };
 		A1A845522A8DF91200A325FB /* GenreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845512A8DF91200A325FB /* GenreViewModel.swift */; };
+		A1A97D3E2B3237BD00B0AB99 /* GenreSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A97D3D2B3237BD00B0AB99 /* GenreSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		A1A8454A2A8D4D2F00A325FB /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		A1A8454F2A8DF90600A325FB /* GenreListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListViewModel.swift; sourceTree = "<group>"; };
 		A1A845512A8DF91200A325FB /* GenreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewModel.swift; sourceTree = "<group>"; };
+		A1A97D3D2B3237BD00B0AB99 /* GenreSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				A1A8453D2A8CA72B00A325FB /* MovieListView.swift */,
 				A1A8453F2A8CA73800A325FB /* NoResultView.swift */,
 				A1A845412A8CA74400A325FB /* URLImage.swift */,
+				A1A97D3D2B3237BD00B0AB99 /* GenreSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				A1A845422A8CA74400A325FB /* URLImage.swift in Sources */,
 				A1A8453A2A8CA6E900A325FB /* Constant.swift in Sources */,
 				A1A8452C2A8CA4FD00A325FB /* String+Extensions.swift in Sources */,
+				A1A97D3E2B3237BD00B0AB99 /* GenreSelectionView.swift in Sources */,
 				A1A8454B2A8D4D2F00A325FB /* MovieViewModel.swift in Sources */,
 				A1A845502A8DF90600A325FB /* GenreListViewModel.swift in Sources */,
 				A1A845362A8CA65800A325FB /* AddMovieScreen.swift in Sources */,

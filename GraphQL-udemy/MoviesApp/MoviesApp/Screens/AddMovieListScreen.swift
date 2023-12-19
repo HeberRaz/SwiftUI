@@ -14,12 +14,8 @@ struct MovieListScreen: View {
 
     var body: some View {
         VStack {
-            Picker("Select", selection: .constant("Foo")) {
-                Text("All")
-                Text("Fiction")
-                Text("Kids")
-                Text("Horror")
-            }.pickerStyle(SegmentedPickerStyle())
+            GenreSelectionView { genreSelectionViewModel in
+            }
             Spacer()
             // Show List of Movies
             if !viewModel.movies.isEmpty {
