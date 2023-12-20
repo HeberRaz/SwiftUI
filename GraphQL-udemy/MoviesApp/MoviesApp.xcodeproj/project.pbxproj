@@ -31,6 +31,7 @@
 		A1A845502A8DF90600A325FB /* GenreListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A8454F2A8DF90600A325FB /* GenreListViewModel.swift */; };
 		A1A845522A8DF91200A325FB /* GenreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A845512A8DF91200A325FB /* GenreViewModel.swift */; };
 		A1A97D3E2B3237BD00B0AB99 /* GenreSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A97D3D2B3237BD00B0AB99 /* GenreSelectionView.swift */; };
+		A1A97D402B3353D100B0AB99 /* AddMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A97D3F2B3353D100B0AB99 /* AddMovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		A1A8454F2A8DF90600A325FB /* GenreListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListViewModel.swift; sourceTree = "<group>"; };
 		A1A845512A8DF91200A325FB /* GenreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewModel.swift; sourceTree = "<group>"; };
 		A1A97D3D2B3237BD00B0AB99 /* GenreSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSelectionView.swift; sourceTree = "<group>"; };
+		A1A97D3F2B3353D100B0AB99 /* AddMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				A1A8454A2A8D4D2F00A325FB /* MovieViewModel.swift */,
 				A1A8454F2A8DF90600A325FB /* GenreListViewModel.swift */,
 				A1A845512A8DF91200A325FB /* GenreViewModel.swift */,
+				A1A97D3F2B3353D100B0AB99 /* AddMovieViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				A1A845382A8CA66300A325FB /* AddMovieListScreen.swift in Sources */,
 				A1A845492A8D4D0700A325FB /* MovieListViewModel.swift in Sources */,
 				A1A844BF2A8C9E8700A325FB /* MoviesAppApp.swift in Sources */,
+				A1A97D402B3353D100B0AB99 /* AddMovieViewModel.swift in Sources */,
 				A1A8453C2A8CA72400A325FB /* FartCounter.swift in Sources */,
 				A1A845402A8CA73800A325FB /* NoResultView.swift in Sources */,
 				A1A8453E2A8CA72B00A325FB /* MovieListView.swift in Sources */,

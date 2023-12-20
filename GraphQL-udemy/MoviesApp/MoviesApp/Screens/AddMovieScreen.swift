@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct AddMovieScreen: View {
+    @StateObject var addMovieViewModel = AddMovieViewModel()
     @Environment(\.presentationMode) private var presentationMode
 
     var body: some View {
         Form {
-            Text("TextField For the Name")
-            Text("TextField For the Year")
-            Text("Picker For the Genre Selection")
+            TextField("Name", text: $addMovieViewModel.name, onEditingChanged: { _ in }) {
+                // TODO: Heber perform a REST API request to get the posters
+            }
+            TextField("Year", text: $addMovieViewModel.year)
+            GenreSelectionView { genreViewModel in
+                
+            }
             Text("Show Movie Posters in Grid")
         }
         .navigationTitle("Add New Movie")

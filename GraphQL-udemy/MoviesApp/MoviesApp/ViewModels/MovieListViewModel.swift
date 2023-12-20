@@ -12,18 +12,25 @@ import MoviesSchema
 class MovieListViewModel: ObservableObject {
     @Published var movies = [MovieViewModel]()
 
-    func getAllMovies() {
-        Network.shared.apollo.fetch(query: AllMoviesQuery()) { result in
+    func getAllMovies(genre: String? = nil) {
+        var nullableGenre: GraphQLNullable<String> {
+            if let genre {
+                return .some(genre)
+            }
+            return .null
+        }
+        Network.shared.apollo.fetch(query: AllMoviesQuery(genre: nullableGenre)) { result in
             switch result {
             case .success(let graphQlResult):
                 guard let data = graphQlResult.data,
                       let movies = data.movies
                 else { return }
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [weak self] in
+                    self?.movies = []
                     for movie in movies {
                         guard let safeMovie = movie else { return }
 
-                        self.movies.append(
+                        self?.movies.append(
                             MovieViewModel(
                                 id: safeMovie.id,
                                 title: safeMovie.title,

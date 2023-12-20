@@ -54,6 +54,18 @@ input MovieFilter {
   genre: String
 }
 
+input MovieInput {
+  id: ID
+  title: String!
+  year: String!
+  genre: String!
+  poster: String!
+}
+
+type Mutation {
+  addMovie(movie: MovieInput): Movie
+}
+
 type Query {
   movies(filter: MovieFilter): [Movie]
   genres: [Genre]

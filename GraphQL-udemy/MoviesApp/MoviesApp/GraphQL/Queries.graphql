@@ -15,3 +15,9 @@ query AllGenres {
     name
   }
 }
+
+mutation CreateMovie($movie: MovieInput) {
+  addMovie(movie: $movie) {
+    id
+  }
+}

@@ -14,8 +14,7 @@ struct MovieListScreen: View {
 
     var body: some View {
         VStack {
-            GenreSelectionView { genreSelectionViewModel in
-            }
+            GenreSelectionView(onSelected: genreSelected)
             Spacer()
             // Show List of Movies
             if !viewModel.movies.isEmpty {
@@ -41,6 +40,18 @@ struct MovieListScreen: View {
         }))
         .navigationTitle("Movies")
         .embedInNavigationView()
+    }
+}
+
+// MARK: - Private methods
+extension MovieListScreen {
+    func genreSelected(genreViewModel: GenreViewModel) {
+        switch genreViewModel.name {
+        case "All":
+            viewModel.getAllMovies()
+        default:
+            viewModel.getAllMovies(genre: genreViewModel.name)
+        }
     }
 }
 
