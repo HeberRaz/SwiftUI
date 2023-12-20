@@ -17,8 +17,8 @@ struct AddMovieScreen: View {
                 // TODO: Heber perform a REST API request to get the posters
             }
             TextField("Year", text: $addMovieViewModel.year)
-            GenreSelectionView { genreViewModel in
-                
+            GenreSelectionView(ignoredGenres: ["All"]) { genreViewModel in
+
             }
             Text("Show Movie Posters in Grid")
         }

@@ -10,10 +10,11 @@ import SwiftUI
 struct GenreSelectionView: View {
     @State private var selectedGenre: GenreViewModel = GenreViewModel.default
     @StateObject private var genreListViewModel: GenreListViewModel = GenreListViewModel()
+    var ignoredGenres: [String]?
     let onSelected: (GenreViewModel) -> Void
     var body: some View {
         Picker("Select", selection: $selectedGenre) {
-            ForEach(genreListViewModel.genres, id: \.id) { genre in
+            ForEach(prepareGenres(), id: \.id) { genre in
                 Text(genre.name).tag(genre)
             }
         }
@@ -23,6 +24,16 @@ struct GenreSelectionView: View {
         }
         .onChange(of: selectedGenre) { value in
             onSelected(value)
+        }
+    }
+}
+
+// MARK: - Helper functions
+extension GenreSelectionView {
+    func prepareGenres() -> [GenreViewModel] {
+        guard let ignoredGenres = ignoredGenres else { return genreListViewModel.genres }
+        return genreListViewModel.genres.filter { genre in
+            !ignoredGenres.contains(genre.name)
         }
     }
 }
