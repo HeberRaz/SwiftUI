@@ -9,7 +9,7 @@ import Foundation
 
 struct Constant {
     struct Keys {
-        static let apiKey = "564727fa"
+        static let apiKey = "c454be77"
     }
 
     struct Urls {
