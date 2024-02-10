@@ -14,13 +14,13 @@ struct AddMovieScreen: View {
     var body: some View {
         Form {
             TextField("Name", text: $addMovieViewModel.name, onEditingChanged: { _ in }) {
-                // TODO: Heber perform a REST API request to get the posters
+                addMovieViewModel.fetchPosterByMovie(name: addMovieViewModel.name.encoded())
             }
             TextField("Year", text: $addMovieViewModel.year)
             GenreSelectionView(ignoredGenres: ["All"]) { genreViewModel in
 
             }
-            Text("Show Movie Posters in Grid")
+            MoviePosterGridView(posters: addMovieViewModel.posters, selectedPoster: $addMovieViewModel.poster)
         }
         .navigationTitle("Add New Movie")
         .navigationBarItems(trailing: Button("Save") {

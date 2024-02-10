@@ -11,6 +11,7 @@ import MoviesSchema
 class AddMovieViewModel: ObservableObject {
     var name: String = ""
     var year: String = ""
+    @Published var posters = [PosterViewModel]()
     @Published var poster: String = ""
     var genre: String = ""
 
@@ -19,10 +20,23 @@ class AddMovieViewModel: ObservableObject {
         let nullableMovie: GraphQLNullable<MovieInput> = .some(movie)
         Network.shared.apollo.perform(mutation: CreateMovieMutation(movie: nullableMovie)) { result in
             switch result {
-            case .success(let graphQLResult):
+            case .success(_):
                 completion()
             case .failure(let error):
                 print("AddMovieError", error)
+            }
+        }
+    }
+
+    func fetchPosterByMovie(name: String) {
+        WebService().getMovieBy(name: name) { [weak self] result in
+            switch result {
+            case .success(let movies):
+                DispatchQueue.main.async {
+                    self?.posters = movies.map(PosterViewModel.init)
+                }
+            case .failure(let error):
+                print("Poster Error", error)
             }
         }
     }

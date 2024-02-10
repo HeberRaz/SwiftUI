@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct PosterViewModel {
+    let movie: Movie
+    let id = UUID()
+
+    var title: String {
+        movie.title
+    }
+
+    var poster: String {
+        movie.poster
+    }
+}

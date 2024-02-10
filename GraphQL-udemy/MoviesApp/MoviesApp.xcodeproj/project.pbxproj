@@ -36,6 +36,8 @@
 		A1A97D442B336C1E00B0AB99 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A97D432B336C1E00B0AB99 /* NetworkError.swift */; };
 		A1A97D462B336C4500B0AB99 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A97D452B336C4500B0AB99 /* Movie.swift */; };
 		A1A97D482B336D0800B0AB99 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A97D472B336D0800B0AB99 /* MovieResponse.swift */; };
+		A1A97D4B2B3373B500B0AB99 /* PosterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A97D4A2B3373B500B0AB99 /* PosterViewModel.swift */; };
+		A1A97D4D2B3374B000B0AB99 /* MoviePosterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A97D4C2B3374B000B0AB99 /* MoviePosterGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,9 @@
 		A1A97D432B336C1E00B0AB99 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A1A97D452B336C4500B0AB99 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A1A97D472B336D0800B0AB99 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		A1A97D492B33728A00B0AB99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A1A97D4A2B3373B500B0AB99 /* PosterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewModel.swift; sourceTree = "<group>"; };
+		A1A97D4C2B3374B000B0AB99 /* MoviePosterGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,7 @@
 		A1A844BD2A8C9E8700A325FB /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				A1A97D492B33728A00B0AB99 /* Info.plist */,
 				A1A845032A8CA20500A325FB /* Extensions */,
 				A1A845082A8CA23200A325FB /* GraphQL */,
 				A1A845132A8CA25100A325FB /* Loaders */,
@@ -154,6 +160,7 @@
 				A1A8453F2A8CA73800A325FB /* NoResultView.swift */,
 				A1A845412A8CA74400A325FB /* URLImage.swift */,
 				A1A97D3D2B3237BD00B0AB99 /* GenreSelectionView.swift */,
+				A1A97D4C2B3374B000B0AB99 /* MoviePosterGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +173,7 @@
 				A1A8454F2A8DF90600A325FB /* GenreListViewModel.swift */,
 				A1A845512A8DF91200A325FB /* GenreViewModel.swift */,
 				A1A97D3F2B3353D100B0AB99 /* AddMovieViewModel.swift */,
+				A1A97D4A2B3373B500B0AB99 /* PosterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 				A1A8453C2A8CA72400A325FB /* FartCounter.swift in Sources */,
 				A1A845402A8CA73800A325FB /* NoResultView.swift in Sources */,
 				A1A8453E2A8CA72B00A325FB /* MovieListView.swift in Sources */,
+				A1A97D4B2B3373B500B0AB99 /* PosterViewModel.swift in Sources */,
 				A1A845422A8CA74400A325FB /* URLImage.swift in Sources */,
 				A1A8453A2A8CA6E900A325FB /* Constant.swift in Sources */,
 				A1A8452C2A8CA4FD00A325FB /* String+Extensions.swift in Sources */,
@@ -320,6 +329,7 @@
 				A1A845302A8CA59B00A325FB /* Network.swift in Sources */,
 				A1A845342A8CA62900A325FB /* ImageLoader.swift in Sources */,
 				A1A97D422B336B8D00B0AB99 /* WebService.swift in Sources */,
+				A1A97D4D2B3374B000B0AB99 /* MoviePosterGridView.swift in Sources */,
 				A1A97D462B336C4500B0AB99 /* Movie.swift in Sources */,
 				A1A845522A8DF91200A325FB /* GenreViewModel.swift in Sources */,
 			);
@@ -453,6 +463,7 @@
 				DEVELOPMENT_TEAM = Y3ZCMF2WPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoviesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -482,6 +493,7 @@
 				DEVELOPMENT_TEAM = Y3ZCMF2WPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoviesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
