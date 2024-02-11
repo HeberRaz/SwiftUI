@@ -9,10 +9,11 @@ import Foundation
 import Apollo
 
 class Network {
-    let localHost = "http://localhost:4000"
+    // let localHost = "http://localhost:4000"
+    let host = "https://thawing-sands-48332-b96d27b35a7a.herokuapp.com/"
     static let shared: Network = Network()
 
     private init() { }
 
-    lazy var apollo = ApolloClient(url: URL(string: localHost)!)
+    lazy var apollo = ApolloClient(url: URL(string: host)!)
 }
