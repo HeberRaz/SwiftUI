@@ -18,12 +18,15 @@ struct AddMovieScreen: View {
             }
             TextField("Year", text: $addMovieViewModel.year)
             GenreSelectionView(ignoredGenres: ["All"]) { genreViewModel in
-
+                addMovieViewModel.genre = genreViewModel.name
             }
             MoviePosterGridView(posters: addMovieViewModel.posters, selectedPoster: $addMovieViewModel.poster)
         }
         .navigationTitle("Add New Movie")
         .navigationBarItems(trailing: Button("Save") {
+            addMovieViewModel.addMovie {
+                presentationMode.wrappedValue.dismiss()
+            }
         })
         .embedInNavigationView()
     }

@@ -25,6 +25,7 @@ struct MovieListScreen: View {
             Spacer()
         }
         .sheet(isPresented: $isPresented, onDismiss: {
+            viewModel.getAllMovies()
         }, content: {
             AddMovieScreen()
         })

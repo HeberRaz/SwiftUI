@@ -19,7 +19,7 @@ class MovieListViewModel: ObservableObject {
             }
             return .null
         }
-        Network.shared.apollo.fetch(query: AllMoviesQuery(genre: nullableGenre)) { result in
+        Network.shared.apollo.fetch(query: AllMoviesQuery(genre: nullableGenre), cachePolicy: .fetchIgnoringCacheData) { result in
             switch result {
             case .success(let graphQlResult):
                 guard let data = graphQlResult.data,
