@@ -15,9 +15,8 @@ class MovieListViewModel: ObservableObject {
     func deleteMovie(movieId: String) {
         Network.shared.apollo.perform(mutation: DeleteMovieMutation(movieToDelete: movieId)) { [weak self] result in
             switch result {
-            case .success(let graphQlResult):
+            case .success(_):
                 self?.getAllMovies()
-                print(graphQlResult)
             case .failure(let error):
                 print(error)
             }
