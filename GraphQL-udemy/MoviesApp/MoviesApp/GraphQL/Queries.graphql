@@ -21,3 +21,13 @@ mutation CreateMovie($movie: MovieInput) {
     id
   }
 }
+
+mutation DeleteMovie($movieToDelete: ID!) {
+  deleteMovie(id: $movieToDelete) {
+    id
+    title
+    genre
+    poster
+    year
+  }
+}

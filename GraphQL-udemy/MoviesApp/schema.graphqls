@@ -64,6 +64,7 @@ input MovieInput {
 
 type Mutation {
   addMovie(movie: MovieInput): Movie
+  deleteMovie(id: ID!): Movie
 }
 
 type Query {
