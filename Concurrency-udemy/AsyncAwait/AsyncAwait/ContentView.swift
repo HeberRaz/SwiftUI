@@ -7,52 +7,27 @@
 
 import SwiftUI
 
-struct CurrentDate: Decodable, Identifiable {
-    let id = UUID()
-    let date: String
-
-    private enum CodingKeys: String, CodingKey {
-        case date = "date"
-    }
-}
-
 struct ContentView: View {
+    @StateObject private var currentDateListViewModel = CurrentDateListViewModel()
     @State private var currentDates = [CurrentDate]()
 
     var body: some View {
         NavigationView {
-            List(currentDates) { currentDate in
+            List(currentDateListViewModel.currentDates, id: \.id) { currentDate in
                 Text("\(currentDate.date)")
             }.listStyle(.plain)
 
             .navigationTitle("Dates")
             .navigationBarItems(trailing: Button(action: {
                 Task {
-                    await populateDates()
+                    await currentDateListViewModel.populateAllDates
                 }
             }, label: {
                 Image(systemName: "arrow.clockwise.circle")
             }))
             .task {
-                await populateDates()
+                await currentDateListViewModel.populateAllDates()
             }
-        }
-    }
-
-    private func getDate() async throws -> CurrentDate? {
-        guard let url = URL(string: "https://ember-sparkly-rule.glitch.me/current-date") else {
-            fatalError("Wrong URL!")
-        }
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try? JSONDecoder().decode(CurrentDate.self, from: data)
-    }
-
-    private func populateDates() async {
-        do {
-            guard let currentDate = try await getDate() else { return }
-            self.currentDates.append(currentDate)
-        } catch {
-            print("--> error", error)
         }
     }
 }
