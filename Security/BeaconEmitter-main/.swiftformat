@@ -1,0 +1,10 @@
+# file options
+
+--swiftversion 5.8
+
+# format options
+
+--self remove
+--patternlet inline
+
+# rules
