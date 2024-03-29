@@ -9,14 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var locationManager = LocationManager()
+    @State private var distanceReading = "UNKNOWN"
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Security!")
+        ZStack {
+            locationManager.model?.backgroundColor.edgesIgnoringSafeArea(.all)
+            VStack {
+                Image(systemName: "mappin.and.ellipse")
+                    .imageScale(.large)
+                    .foregroundStyle(.primary)
+                Text(locationManager.model?.distanceReading ?? "")
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .ignoresSafeArea(.all)
+            .background(locationManager.model?.backgroundColor)
         }
-        .padding()
     }
 }
 

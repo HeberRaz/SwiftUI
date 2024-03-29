@@ -12,6 +12,7 @@
 		A1C6A4042BB70AD80064D1FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C6A4032BB70AD80064D1FF /* Assets.xcassets */; };
 		A1C6A4072BB70AD80064D1FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C6A4062BB70AD80064D1FF /* Preview Assets.xcassets */; };
 		A1C6A40F2BB711DD0064D1FF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A40E2BB711DD0064D1FF /* LocationManager.swift */; };
+		A1C6A4132BB722EB0064D1FF /* BeaconProximityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A4122BB722EB0064D1FF /* BeaconProximityModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A1C6A4062BB70AD80064D1FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1C6A40D2BB70D4E0064D1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A1C6A40E2BB711DD0064D1FF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A1C6A4122BB722EB0064D1FF /* BeaconProximityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconProximityModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				A1C6A40D2BB70D4E0064D1FF /* Info.plist */,
 				A1C6A3FF2BB70AD60064D1FF /* SecurityFrameworkApp.swift */,
 				A1C6A4012BB70AD60064D1FF /* ContentView.swift */,
+				A1C6A4122BB722EB0064D1FF /* BeaconProximityModel.swift */,
 				A1C6A40E2BB711DD0064D1FF /* LocationManager.swift */,
 				A1C6A4032BB70AD80064D1FF /* Assets.xcassets */,
 				A1C6A4052BB70AD80064D1FF /* Preview Content */,
@@ -145,6 +148,7 @@
 				A1C6A4022BB70AD60064D1FF /* ContentView.swift in Sources */,
 				A1C6A4002BB70AD60064D1FF /* SecurityFrameworkApp.swift in Sources */,
 				A1C6A40F2BB711DD0064D1FF /* LocationManager.swift in Sources */,
+				A1C6A4132BB722EB0064D1FF /* BeaconProximityModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
