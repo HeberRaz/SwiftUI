@@ -15,3 +15,10 @@ struct SecurityFrameworkApp: App {
         }
     }
 }
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func applicationProtectedDataWillBecomeUnavailable(_ application: UIApplication) {
+        // Handle protected data becoming unavailable
+        print("Protected data will become unavailable")
+    }
+}

@@ -7,41 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A110450B2BB7419400526C0B /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A110450A2BB7419400526C0B /* Encryptor.swift */; };
-		A110450D2BB7460200526C0B /* DataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A110450C2BB7460200526C0B /* DataStub.swift */; };
-		A110450F2BB8830500526C0B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A110450E2BB8830500526C0B /* Person.swift */; };
-		A11045112BB883E400526C0B /* Decryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11045102BB883E400526C0B /* Decryptor.swift */; };
-		A11045132BB8A48A00526C0B /* ProtectionLevelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11045122BB8A48A00526C0B /* ProtectionLevelError.swift */; };
-		A160A6EF2BCD9F4100C5F436 /* KeychainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A6EE2BCD9F4100C5F436 /* KeychainView.swift */; };
-		A1C6A4002BB70AD60064D1FF /* SecurityFrameworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A3FF2BB70AD60064D1FF /* SecurityFrameworkApp.swift */; };
-		A1C6A4022BB70AD60064D1FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A4012BB70AD60064D1FF /* ContentView.swift */; };
-		A1C6A4042BB70AD80064D1FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C6A4032BB70AD80064D1FF /* Assets.xcassets */; };
-		A1C6A4072BB70AD80064D1FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C6A4062BB70AD80064D1FF /* Preview Assets.xcassets */; };
-		A1C6A40F2BB711DD0064D1FF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A40E2BB711DD0064D1FF /* LocationManager.swift */; };
-		A1C6A4132BB722EB0064D1FF /* BeaconProximityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C6A4122BB722EB0064D1FF /* BeaconProximityModel.swift */; };
-		A1E67E902BCD988C0021DE76 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E67E8F2BCD988C0021DE76 /* KeychainManager.swift */; };
+		A1C2D5492BDC088B0098EA16 /* CustomTipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2D5482BDC088B0098EA16 /* CustomTipApp.swift */; };
+		A1C2D54B2BDC088B0098EA16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2D54A2BDC088B0098EA16 /* ContentView.swift */; };
+		A1C2D54D2BDC088D0098EA16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C2D54C2BDC088D0098EA16 /* Assets.xcassets */; };
+		A1C2D5502BDC088D0098EA16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C2D54F2BDC088D0098EA16 /* Preview Assets.xcassets */; };
+		A1C2D5572BDC08A20098EA16 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2D5562BDC08A20098EA16 /* Tip.swift */; };
+		A1C2D5592BDC08B90098EA16 /* HighlightedTooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2D5582BDC08B90098EA16 /* HighlightedTooltip.swift */; };
+		A1C2D55B2BDC08D60098EA16 /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2D55A2BDC08D60098EA16 /* SizeCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A110450A2BB7419400526C0B /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
-		A110450C2BB7460200526C0B /* DataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStub.swift; sourceTree = "<group>"; };
-		A110450E2BB8830500526C0B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		A11045102BB883E400526C0B /* Decryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decryptor.swift; sourceTree = "<group>"; };
-		A11045122BB8A48A00526C0B /* ProtectionLevelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionLevelError.swift; sourceTree = "<group>"; };
-		A160A6EE2BCD9F4100C5F436 /* KeychainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainView.swift; sourceTree = "<group>"; };
-		A1C6A3FC2BB70AD60064D1FF /* SecurityFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1C6A3FF2BB70AD60064D1FF /* SecurityFrameworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityFrameworkApp.swift; sourceTree = "<group>"; };
-		A1C6A4012BB70AD60064D1FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A1C6A4032BB70AD80064D1FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A1C6A4062BB70AD80064D1FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A1C6A40D2BB70D4E0064D1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		A1C6A40E2BB711DD0064D1FF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		A1C6A4122BB722EB0064D1FF /* BeaconProximityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconProximityModel.swift; sourceTree = "<group>"; };
-		A1E67E8F2BCD988C0021DE76 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		A1C2D5452BDC088B0098EA16 /* CustomTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C2D5482BDC088B0098EA16 /* CustomTipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTipApp.swift; sourceTree = "<group>"; };
+		A1C2D54A2BDC088B0098EA16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A1C2D54C2BDC088D0098EA16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1C2D54F2BDC088D0098EA16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1C2D5562BDC08A20098EA16 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		A1C2D5582BDC08B90098EA16 /* HighlightedTooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedTooltip.swift; sourceTree = "<group>"; };
+		A1C2D55A2BDC08D60098EA16 /* SizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A1C6A3F92BB70AD60064D1FF /* Frameworks */ = {
+		A1C2D5422BDC088B0098EA16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,47 +38,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A1C6A3F32BB70AD60064D1FF = {
+		A1C2D53C2BDC088B0098EA16 = {
 			isa = PBXGroup;
 			children = (
-				A1C6A3FE2BB70AD60064D1FF /* SecurityFramework */,
-				A1C6A3FD2BB70AD60064D1FF /* Products */,
+				A1C2D5472BDC088B0098EA16 /* CustomTip */,
+				A1C2D5462BDC088B0098EA16 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A1C6A3FD2BB70AD60064D1FF /* Products */ = {
+		A1C2D5462BDC088B0098EA16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1C6A3FC2BB70AD60064D1FF /* SecurityFramework.app */,
+				A1C2D5452BDC088B0098EA16 /* CustomTip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A1C6A3FE2BB70AD60064D1FF /* SecurityFramework */ = {
+		A1C2D5472BDC088B0098EA16 /* CustomTip */ = {
 			isa = PBXGroup;
 			children = (
-				A1C6A40D2BB70D4E0064D1FF /* Info.plist */,
-				A1C6A3FF2BB70AD60064D1FF /* SecurityFrameworkApp.swift */,
-				A160A6EE2BCD9F4100C5F436 /* KeychainView.swift */,
-				A1C6A4012BB70AD60064D1FF /* ContentView.swift */,
-				A1C6A4122BB722EB0064D1FF /* BeaconProximityModel.swift */,
-				A1C6A40E2BB711DD0064D1FF /* LocationManager.swift */,
-				A1C6A4032BB70AD80064D1FF /* Assets.xcassets */,
-				A1C6A4052BB70AD80064D1FF /* Preview Content */,
-				A110450A2BB7419400526C0B /* Encryptor.swift */,
-				A1E67E8F2BCD988C0021DE76 /* KeychainManager.swift */,
-				A11045102BB883E400526C0B /* Decryptor.swift */,
-				A110450C2BB7460200526C0B /* DataStub.swift */,
-				A110450E2BB8830500526C0B /* Person.swift */,
-				A11045122BB8A48A00526C0B /* ProtectionLevelError.swift */,
+				A1C2D5482BDC088B0098EA16 /* CustomTipApp.swift */,
+				A1C2D54A2BDC088B0098EA16 /* ContentView.swift */,
+				A1C2D5562BDC08A20098EA16 /* Tip.swift */,
+				A1C2D5582BDC08B90098EA16 /* HighlightedTooltip.swift */,
+				A1C2D55A2BDC08D60098EA16 /* SizeCalculator.swift */,
+				A1C2D54C2BDC088D0098EA16 /* Assets.xcassets */,
+				A1C2D54E2BDC088D0098EA16 /* Preview Content */,
 			);
-			path = SecurityFramework;
+			path = CustomTip;
 			sourceTree = "<group>";
 		};
-		A1C6A4052BB70AD80064D1FF /* Preview Content */ = {
+		A1C2D54E2BDC088D0098EA16 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				A1C6A4062BB70AD80064D1FF /* Preview Assets.xcassets */,
+				A1C2D54F2BDC088D0098EA16 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -99,39 +79,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1C6A3FB2BB70AD60064D1FF /* SecurityFramework */ = {
+		A1C2D5442BDC088B0098EA16 /* CustomTip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1C6A40A2BB70AD80064D1FF /* Build configuration list for PBXNativeTarget "SecurityFramework" */;
+			buildConfigurationList = A1C2D5532BDC088D0098EA16 /* Build configuration list for PBXNativeTarget "CustomTip" */;
 			buildPhases = (
-				A1C6A3F82BB70AD60064D1FF /* Sources */,
-				A1C6A3F92BB70AD60064D1FF /* Frameworks */,
-				A1C6A3FA2BB70AD60064D1FF /* Resources */,
+				A1C2D5412BDC088B0098EA16 /* Sources */,
+				A1C2D5422BDC088B0098EA16 /* Frameworks */,
+				A1C2D5432BDC088B0098EA16 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SecurityFramework;
-			productName = SecurityFramework;
-			productReference = A1C6A3FC2BB70AD60064D1FF /* SecurityFramework.app */;
+			name = CustomTip;
+			productName = CustomTip;
+			productReference = A1C2D5452BDC088B0098EA16 /* CustomTip.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A1C6A3F42BB70AD60064D1FF /* Project object */ = {
+		A1C2D53D2BDC088B0098EA16 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					A1C6A3FB2BB70AD60064D1FF = {
+					A1C2D5442BDC088B0098EA16 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
-			buildConfigurationList = A1C6A3F72BB70AD60064D1FF /* Build configuration list for PBXProject "SecurityFramework" */;
+			buildConfigurationList = A1C2D5402BDC088B0098EA16 /* Build configuration list for PBXProject "CustomTip" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -139,51 +119,45 @@
 				en,
 				Base,
 			);
-			mainGroup = A1C6A3F32BB70AD60064D1FF;
-			productRefGroup = A1C6A3FD2BB70AD60064D1FF /* Products */;
+			mainGroup = A1C2D53C2BDC088B0098EA16;
+			productRefGroup = A1C2D5462BDC088B0098EA16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1C6A3FB2BB70AD60064D1FF /* SecurityFramework */,
+				A1C2D5442BDC088B0098EA16 /* CustomTip */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A1C6A3FA2BB70AD60064D1FF /* Resources */ = {
+		A1C2D5432BDC088B0098EA16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1C6A4072BB70AD80064D1FF /* Preview Assets.xcassets in Resources */,
-				A1C6A4042BB70AD80064D1FF /* Assets.xcassets in Resources */,
+				A1C2D5502BDC088D0098EA16 /* Preview Assets.xcassets in Resources */,
+				A1C2D54D2BDC088D0098EA16 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A1C6A3F82BB70AD60064D1FF /* Sources */ = {
+		A1C2D5412BDC088B0098EA16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1C6A4022BB70AD60064D1FF /* ContentView.swift in Sources */,
-				A110450D2BB7460200526C0B /* DataStub.swift in Sources */,
-				A11045132BB8A48A00526C0B /* ProtectionLevelError.swift in Sources */,
-				A1C6A4002BB70AD60064D1FF /* SecurityFrameworkApp.swift in Sources */,
-				A110450B2BB7419400526C0B /* Encryptor.swift in Sources */,
-				A110450F2BB8830500526C0B /* Person.swift in Sources */,
-				A160A6EF2BCD9F4100C5F436 /* KeychainView.swift in Sources */,
-				A1C6A40F2BB711DD0064D1FF /* LocationManager.swift in Sources */,
-				A11045112BB883E400526C0B /* Decryptor.swift in Sources */,
-				A1C6A4132BB722EB0064D1FF /* BeaconProximityModel.swift in Sources */,
-				A1E67E902BCD988C0021DE76 /* KeychainManager.swift in Sources */,
+				A1C2D5572BDC08A20098EA16 /* Tip.swift in Sources */,
+				A1C2D54B2BDC088B0098EA16 /* ContentView.swift in Sources */,
+				A1C2D5492BDC088B0098EA16 /* CustomTipApp.swift in Sources */,
+				A1C2D55B2BDC08D60098EA16 /* SizeCalculator.swift in Sources */,
+				A1C2D5592BDC08B90098EA16 /* HighlightedTooltip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A1C6A4082BB70AD80064D1FF /* Debug */ = {
+		A1C2D5512BDC088D0098EA16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -246,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		A1C6A4092BB70AD80064D1FF /* Release */ = {
+		A1C2D5522BDC088D0098EA16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -302,19 +276,17 @@
 			};
 			name = Release;
 		};
-		A1C6A40B2BB70AD80064D1FF /* Debug */ = {
+		A1C2D5542BDC088D0098EA16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SecurityFramework/Preview Content\"";
-				DEVELOPMENT_TEAM = 6PT9Z5J23V;
+				DEVELOPMENT_ASSET_PATHS = "\"CustomTip/Preview Content\"";
+				DEVELOPMENT_TEAM = Y3ZCMF2WPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SecurityFramework/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location allows you to view restaurants in delivery range of your address.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -325,7 +297,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "proj.security-framewokr.com.heber.SecurityFramework";
+				PRODUCT_BUNDLE_IDENTIFIER = com.testingTIpKit.heber.CustomTip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -333,19 +305,17 @@
 			};
 			name = Debug;
 		};
-		A1C6A40C2BB70AD80064D1FF /* Release */ = {
+		A1C2D5552BDC088D0098EA16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SecurityFramework/Preview Content\"";
-				DEVELOPMENT_TEAM = 6PT9Z5J23V;
+				DEVELOPMENT_ASSET_PATHS = "\"CustomTip/Preview Content\"";
+				DEVELOPMENT_TEAM = Y3ZCMF2WPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SecurityFramework/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location allows you to view restaurants in delivery range of your address.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -356,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "proj.security-framewokr.com.heber.SecurityFramework";
+				PRODUCT_BUNDLE_IDENTIFIER = com.testingTIpKit.heber.CustomTip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -367,25 +337,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1C6A3F72BB70AD60064D1FF /* Build configuration list for PBXProject "SecurityFramework" */ = {
+		A1C2D5402BDC088B0098EA16 /* Build configuration list for PBXProject "CustomTip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1C6A4082BB70AD80064D1FF /* Debug */,
-				A1C6A4092BB70AD80064D1FF /* Release */,
+				A1C2D5512BDC088D0098EA16 /* Debug */,
+				A1C2D5522BDC088D0098EA16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1C6A40A2BB70AD80064D1FF /* Build configuration list for PBXNativeTarget "SecurityFramework" */ = {
+		A1C2D5532BDC088D0098EA16 /* Build configuration list for PBXNativeTarget "CustomTip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1C6A40B2BB70AD80064D1FF /* Debug */,
-				A1C6A40C2BB70AD80064D1FF /* Release */,
+				A1C2D5542BDC088D0098EA16 /* Debug */,
+				A1C2D5552BDC088D0098EA16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A1C6A3F42BB70AD60064D1FF /* Project object */;
+	rootObject = A1C2D53D2BDC088B0098EA16 /* Project object */;
 }
