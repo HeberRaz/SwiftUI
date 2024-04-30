@@ -6,24 +6,30 @@
 //
 
 import SwiftUI
-struct AnothreView: View {
-    var body: some View {
-        HStack {
-            Text("Another view in here")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
-    }
-}
+
 struct KeychainView: View {
+    @Environment(\.dismiss) var dismiss
     @State private var showNextView = false
 
     var body: some View {
-        Text("Keychain View")
-        Button("Testing button") {
-            showNextView = true
-        }
-        .sheet(isPresented: $showNextView) {
-            AnothreView()
+        NavigationStack {
+            Text("Keychain View")
+            Button("Testing button") {
+                showNextView = true
+            }
+            Button("Go back") {
+                dismiss()
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.left")
+                    }
+
+                }
+            }
         }
     }
 }
